@@ -154,7 +154,29 @@
       }
     }
 
+//PRODUCT PAGE-hez
+        .product-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        .thumbnail:hover, .active-thumbnail {
+            opacity: 1;
+        }
 
+//PRODUCT PAGE-hez VÉGE
 
 
             #checkout-form { display: none; }
@@ -176,17 +198,17 @@
 
 <!-- MENU----------------------------->
      <div class="topnav" id="myTopnav">
-       <a href="#head">Home</a>
+       <a href="./index.html#head">Home</a>
 
        <div class="dropdown">
          <button class="dropbtn">Products
            <i class="fa fa-caret-down"></i>
          </button>
          <div class="dropdown-content">
-           <a href="#books">Books</a>
-           <a href="#accessories">Accessories</a>
-           <a href="#instruments">Instruments</a>
-           <a href="#gliders">Gliders & Harnesses</a>
+           <a href="./index.html#books">Books</a>
+           <a href="./index.html#accessories">Accessories</a>
+           <a href="./index.html#instruments">Instruments</a>
+           <a href="./index.html#gliders">Gliders & Harnesses</a>
          </div>
        </div>
         <button class="w3-button w3-right w3-light-blue" style="min-height: 42px;" onclick="toggleBasket()">
@@ -203,180 +225,83 @@
 <!-- MENU----------------------------->
 
 
+<div class="w3-container product-container w3-card w3-round-large w3-padding">
+    <h2 class="w3-center">Ultrabip variometer  <br> <span style="color:lightgrey">Stodeus</span> </h2>
+    
+    <div class="w3-content w3-display-container" style="max-width:600px">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/stodeus/ultra/1.webp" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/stodeus/ultra/2.webp" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/stodeus/ultra/3.webp" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/stodeus/ultra/4.webp" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/stodeus/ultra/5.webp" style="width:100%">
+
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <div class="thumbnail-container">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/stodeus/ultra/1.webp" onclick="currentSlide(0)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/stodeus/ultra/2.webp" onclick="currentSlide(1)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/stodeus/ultra/3.webp" onclick="currentSlide(2)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/stodeus/ultra/4.webp" onclick="currentSlide(3)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/stodeus/ultra/5.webp" onclick="currentSlide(4)">
+    </div>
+    
+    <div class="w3-padding w3-large">
+        <p><strong>Price:</strong> CHF 45</p>
+        <p><strong>Description:</strong></p>
+        <p>Understanding the Sky is THE essential weather book for pilots – whatever you fly.</p>
+        <p>As a flyer, it’s crucial you have a deep understanding of meteorology, from the micro to the macro. Understanding the Sky covers it all, and having read it you will be a better informed, safer flyer, able to make better decisions based on enhanced knowledge.</p>
+        <p>Understanding the Sky will help you build your understanding of the way air flows and eddies over buildings and trees, figure out how micro-climates are created by coastal systems and mountains, and appreciate the impact of different cloud developments on flying conditions.</p>
+		<p>It doesn’t matter whether you fly paragliders, drones, balloons, models, ultralights, helicopters, or planes – this book has been the best-selling classic meteorology text for over 30 years. Substantially revised and updated, and packed with clear illustrations, you will find it seriously useful!</p>
+		<p>Become a wise sage of the skies.</p>
+        <p><em>“A masterclass in flying weather!”</em> – Greg Hamerton, Fly With Greg flight academy</p>
+        <p><em>“Simply the best weather book – accessible and easy to read!”</em> – Five-star Amazon review</p>
+        
+		<p><strong>About the Author: </strong></p>
+        <p>A pilot with nearly 50 years’ experience, Dennis Pagen is a respected author and meteorology expert. Dennis has served in many capacities for CIVL and the FAI, the world air sports federation. </p>
 
 
-<div class="w3-container w3-section w3-white w3-text-black w3-center w3-padding w3-margin-top" style="max-width:1000px; margin:auto" id="intro">
-  <p class=" w3-justify w3-margin" >At FLYwithMIKI, we are committed to safety and responsible paragliding practices. While many webshops sell paragliding equipment without knowing their customers, we believe this approach overlooks the importance of proper guidance. Choosing the right glider, harness, or reserve parachute requires an expert assessment of your skills, experience, and flying style. That’s why we only offer books and accessories online, while all paragliding equipment purchases are handled personally. If you're looking for a new glider or harness, contact us directly—we take the time to ensure you get the best gear tailored to your needs.</p>
+        
+            <button class="w3-button w3-light-blue w3-round w3-margin" style="" onclick="addToBasket('Understanding the sky (book)', 45); event.stopPropagation();">
+              Add to Basket
+            </button>
+    </div>
 </div>
 
-<!-- PRODUCTS ------------------------------------------------>
-  <div class="w3-container w3-white w3-text-black w3-center w3-padding" style="max-width:1000px; margin:auto" id="products">
-
-  
-  <h2 class="w3-left-align w3-margin" id="books">Books</h2>
-  
-  <div class="w3-row-padding">
-
-      <div class="w3-col s12 m4">
-        <a href="./begguide.html" class="product-link">
-          <div class="w3-card product-card">
-
-            <div class="hover-container">
-              <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/book.webp" alt="Book">
-              <div class="hover-description">
-                This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.
-              </div>
-            </div>  
-
-            <div class="w3-container w3-center">
-              <p>Paragliding: The Beginner's Guide <br> 
-                <span style="color:lightgrey">B. Wentzel, Ed Ewing</span> 
-              </p>
-              <p><b>42 CHF</b></p>
-              <button class="w3-button w3-light-blue w3-margin add-to-basket"
-                      data-product="Beginners Guide (book)" 
-                      data-price="42">
-                Add to Basket
-              </button>
-            </div>
-
-          </div>
-        </a>
-      </div>
-
-
-    <div class="w3-col s12 m4">
-	  <a href="./uts.html" class="product-link">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/sky.webp" alt="sky">
-           <div class="hover-description">Meteorology is the cornerstone of our sports. To become a safe pilot, we should understand what is going on, this book covers it.</div>
-        </div>
-
-        <div class="w3-container w3-center">
-          <p>Understanding the sky <br> <span style="color:lightgrey">Dennis Pagen</span></p>
-          <p><b>45 CHF</b></p>
-		    <button class="w3-button w3-light-blue w3-margin add-to-basket"
-                      data-product="Understanding the sky (book)" 
-                      data-price="45">
-                Add to Basket
-            </button>
-
-        </div>
-      </div>
-    </div>
-	</a>
-  </div>
-
-  <h2 class="w3-left-align w3-margin" id="accessories">Accessories</h2>
-  
-  <div class="w3-row-padding">
-
-    <div class="w3-col s12 m4">
-      <div class="w3-card product-card">
-       <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/bag.webp" alt="Bag">
-          <div class="hover-description">The perfect solution if you do not want to waste too much time with packing before and after flying.</div>
-       </div>
-        <div class="w3-container w3-center">
-          <p>Fast bag for solo glider <br> <span style="color:lightgrey">FLYwithMIKI</span></p>
-          <p><b>105 CHF</b></p>
-          <button class="w3-button w3-light-blue w3-margin"  onclick="addToBasket('Fastbag (bag)', 105)">Add to Basket</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col s12 m4">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/conc.webp" alt="conc">
-           <div class="hover-description">Store your glider in the best way to keep it in shape for several years.</div>
-        </div>
-        <div class="w3-container w3-center">
-          <p>Concertina bag (280cm) <br> <span style="color:lightgrey">YowFly</span> </p>
-          <p><b>60 CHF</b></p>
-          <button class="w3-button w3-light-blue w3-margin " style="margin:auto" onclick="addToBasket('Concertina (bag)', 60)">Add to Basket</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col s12 m4">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/digit.webp" alt="digit">
-           <div class="hover-description">You can calculate how many digits you need under the "School - Learn to Fly" section.</div>
-        </div>
-        <div class="w3-container w3-center">
-          <p>SHV number digit <br> <span style="color:lightgrey">HA</span> </p>
-          <p><b>1.5 CHF / digit</b></p>
-          <button class="w3-button w3-light-blue w3-margin " style="margin:auto" onclick="addToBasket('SHV number (digit)', 1.5)">Add to Basket</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <h2 class="w3-left-align w3-margin" id="instruments">Flying instruments</h2>
-  
-  <div class="w3-row-padding">
-
-    <div class="w3-col s12 m4">
-    <a href="./stodeus_ultra.html" class="product-link">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/ultrabip.webp" alt="ultrabip">
-           <div class="hover-description">The best "immediate" vario with built in GPS, Bluetooth and other features for every hike and fly and XC pilots.</div>
-        </div>
-        <div class="w3-container w3-center">
-          <p>Ultrabip <br> <span style="color:lightgrey">Stodeus</span> </p>
-          <p><b>305 CHF</b></p>
-		    <button class="w3-button w3-light-blue w3-margin add-to-basket"
-                    data-product="Ultrabip(vario)" 
-                    data-price="305">
-                Add to Basket
-            </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col s12 m4">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/bipbip.webp" alt="bipbip">
-           <div class="hover-description">Solar powered variometer for pilots who likes light weight, and simplicity.</div>
-        </div>
-        <div class="w3-container w3-center">
-          <p>BipBip <br> <span style="color:lightgrey">Stodeus</span></p>
-          <p><b>200 CHF</b></p>
-          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('BipbipV2 (vario)', 200)">Add to Basket</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col s12 m4">
-      <div class="w3-card product-card">
-        <div class="hover-container">
-          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/wintec.webp" alt="wintec">
-           <div class="hover-description">Robust PMR radio! The must to have equipment if you want to talk with your instructors or friends during flying.</div>
-        </div>
-        <div class="w3-container w3-center">
-          <p>PMR Radio <br> <span style="color:lightgrey">Basisrausch (Wintec)</span></p>
-          <p><b>229 CHF</b></p>
-          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('Basisrausch PMR (radio)', 229)">Add to Basket</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-</div>
-
-
-
-
+<script>
+    var slideIndex = 0;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+        var i;
+        var slides = document.getElementsByClassName("product-slide");
+        var thumbnails = document.getElementsByClassName("thumbnail");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            thumbnails[i].classList.remove("active-thumbnail");
+        }
+        slides[slideIndex].style.display = "block";
+        thumbnails[slideIndex].classList.add("active-thumbnail");
+    }
+    
+    function autoSlide() {
+        plusDivs(1);
+        setTimeout(autoSlide, 6000);
+    }
+    
+    function currentSlide(n) {
+        showDivs(slideIndex = n);
+    }
+    
+    setTimeout(autoSlide, 6000);
+</script>
 
 <!-- PRODUCTS ------------------------------------------------>
 
@@ -591,21 +516,8 @@ function myFunction() {
 
 
 
-<!-- Hogy az add-to basket-ra ne nyíljkon a link -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Prevent the product link from opening when clicking the "Add to Basket" button
-  document.querySelectorAll(".add-to-basket").forEach(button => {
-    button.addEventListener("click", function (event) {
-      event.stopPropagation();  // Prevent bubbling up to <a>
-      event.preventDefault();   // Prevent link navigation
-      const productName = this.getAttribute("data-product");
-      const productPrice = parseFloat(this.getAttribute("data-price"));
-      addToBasket(productName, productPrice);
-    });
-  });
-});
-</script>
+
+
 
 
 
