@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ 
+        <title>FLYwithMIKI - Paragliding Accessories</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <meta name="description" content="FLYwithMIKI - sadasdasd">
+
+        <meta property="og:url" content="https://flywithmiki.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="FLYwithMIKI - Dasdasdasd" />
+        <meta property="og:description" content="asdasdasd" />
+        <meta property="og:image" content="https://flywithmiki.com/Images_v2/12.webp" />
+
+        <link rel="icon" type="image/x-icon" href="https://flywithmiki.com/Images_v2/favicon.ico">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" font-display: "swap;">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" font-display: "swap;">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            html {scroll-behavior: smooth;}
+            .product-card { width: 100%; margin-bottom: 20px; /* Add margin between cards */ }
+            .product-card img { width: 100%; height: 200px; /* Set the height to a fixed value */ object-fit: contain; /* Cover the entire space with the image */  }
+            .basket {position: fixed; top: 40px; right: 10px;}
+            .hover-container { position: relative; display: inline-block;         width: 100%;}
+            .hover-description {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7);color: white;         display: flex; align-items: center;justify-content: center;         text-align: center; opacity: 0;transition: opacity 0.3s ease-in-out;
+            padding: 10px;box-sizing: border-box; }
+            .hover-container:hover .hover-description {opacity: 1;}
+             body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+            .w3-third img {margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+            .w3-third img:hover {opacity: 1}
+          
+            .menu {
+              position: fixed;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 100%;
+              max-width: 1000px; /* Ensures it stays within 1000px */
+              display: flex;
+              align-items: center;
+              background-color: #d5e4e6;
+              padding: 0 16px;
+              z-index: 1000;
+            }
+            .menu-logo {
+              flex: 1;
+            }
+            .menu-items {
+              flex: 2;
+              display: flex;
+              justify-content: center;
+            }
+            .menu-items a, .menu-about a {
+              padding: 14px 16px;
+              text-decoration: none;
+              color: black;
+              display: block;
+            }
+            .menu-items a:hover, .menu-about a:hover {
+              background-color: #111;
+            }
+            .menu-about {
+              flex: 1;
+              display: flex;
+              justify-content: flex-end;
+            }
+
+
+            #checkout-form { display: none; }
+        </style>
+
+
+
+</head> 
+
+
+
+<body class="w3-white w3-content">
+
+<div class="menu w3-bar w3-center " style="max-width:1000px; margin:auto">
+  <div class="menu-logo">
+    <img src="https://flywithmiki.com/Images_v2/logo1.webp" alt="logoc" style="width:100%; max-width:300px">
+  </div>
+  <div class="menu-items">
+    <a href="#home" class="w3-bar-item w3-button">Home</a>
+    <a href="#news" class="w3-bar-item w3-button">News</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+  <div class="menu-about">
+    <button class="w3-button w3-block w3-light-blue" onclick="toggleBasket()">
+        <span id="basket-toggle-icon">View</span> Basket <span class="w3-badge w3-gray" id="basket-count">0</span>
+    </button>
+  </div>
+</div>
+
+   <div class="w3-container w3-section w3-white w3-text-black w3-center w3-padding w3-margin-top" style="max-width:1000px; margin:auto" id="intro">
+     <br><h1 class="w3-left-align w3-margin w3-section">Paragliding Accessories</h1>
+  <p class=" w3-justify w3-margin" >At FLYwithMIKI, we are committed to safety and responsible paragliding practices. While many webshops sell paragliding equipment without knowing their customers, we believe this approach overlooks the importance of proper guidance. Choosing the right glider, harness, or reserve parachute requires an expert assessment of your skills, experience, and flying style. That’s why we only offer books and accessories online, while all paragliding equipment purchases are handled personally. If you're looking for a new glider or harness, contact us directly—we take the time to ensure you get the best gear tailored to your needs.</p>
+   </div>
+
+<!-- PRODUCTS ------------------------------------------------>
+  <div class="w3-container w3-white w3-text-black w3-center w3-padding" style="max-width:1000px; margin:auto" id="products">
+
+  
+  <h2 class="w3-left-align w3-margin">Books</h2>
+  
+  <div class="w3-row-padding">
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/book.webp" alt="Book">
+          <div class="hover-description">This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.</div>
+        </div>  
+        <div class="w3-container w3-center">
+          <p>Paragliding: The Beginner's Guide <br> <span style="color:lightgrey">B. Wentzel, Ed Ewing</span> </p>
+          <p><b>42 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin" style="" onclick="addToBasket('Beginners Guide (book)', 42)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/sky.webp" alt="sky">
+           <div class="hover-description">Meteorology is the cornerstone of our sports. To become a safe pilot, we should understand what is going on, this book covers it.</div>
+        </div>
+
+        <div class="w3-container w3-center">
+          <p>Understanding the sky <br> <span style="color:lightgrey">Dennis Pagen</span></p>
+          <p><b>45 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('Understanding the sky (book)', 45)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="w3-left-align w3-margin">Accessories</h2>
+  
+  <div class="w3-row-padding">
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+       <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/bag.webp" alt="Bag">
+          <div class="hover-description">The perfect solution if you do not want to waste too much time with packing before and after flying.</div>
+       </div>
+        <div class="w3-container w3-center">
+          <p>Fast bag for solo glider <br> <span style="color:lightgrey">FLYwithMIKI</span></p>
+          <p><b>105 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin"  onclick="addToBasket('Fastbag (bag)', 105)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/conc.webp" alt="conc">
+           <div class="hover-description">Store your glider in the best way to keep it in shape for several years.</div>
+        </div>
+        <div class="w3-container w3-center">
+          <p>Concertina bag (280cm) <br> <span style="color:lightgrey">YowFly</span> </p>
+          <p><b>60 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin " style="margin:auto" onclick="addToBasket('Concertina (bag)', 60)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/digit.webp" alt="digit">
+           <div class="hover-description">You can calculate how many digits you need under the "School - Learn to Fly" section.</div>
+        </div>
+        <div class="w3-container w3-center">
+          <p>SHV number digit <br> <span style="color:lightgrey">HA</span> </p>
+          <p><b>1.5 CHF / digit</b></p>
+          <button class="w3-button w3-light-blue w3-margin " style="margin:auto" onclick="addToBasket('SHV number (digit)', 1.5)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="w3-left-align w3-margin">Flying instruments</h2>
+  
+  <div class="w3-row-padding">
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/ultrabip.webp" alt="ultrabip">
+           <div class="hover-description">The best "immediate" vario with built in GPS, Bluetooth and other features for every hike and fly and XC pilots.</div>
+        </div>
+        <div class="w3-container w3-center">
+          <p>Ultrabip <br> <span style="color:lightgrey">Stodeus</span> </p>
+          <p><b>305 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('Ultrabip(vario)', 305)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/bipbip.webp" alt="bipbip">
+           <div class="hover-description">Solar powered variometer for pilots who likes light weight, and simplicity.</div>
+        </div>
+        <div class="w3-container w3-center">
+          <p>BipBip <br> <span style="color:lightgrey">Stodeus</span></p>
+          <p><b>200 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('BipbipV2 (vario)', 200)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col s12 m4">
+      <div class="w3-card product-card">
+        <div class="hover-container">
+          <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/wintec.webp" alt="wintec">
+           <div class="hover-description">Robust PMR radio! The must to have equipment if you want to talk with your instructors or friends during flying.</div>
+        </div>
+        <div class="w3-container w3-center">
+          <p>PMR Radio <br> <span style="color:lightgrey">Basisrausch (Wintec)</span></p>
+          <p><b>229 CHF</b></p>
+          <button class="w3-button w3-light-blue w3-margin" style="center" onclick="addToBasket('Basisrausch PMR (radio)', 229)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+<!-- PRODUCTS ------------------------------------------------>
+
+
+<!-- Basket Section -->
+<div class="basket w3-card w3-white w3-responsive" style="max-width:600px; margin:auto" id="basket-container">
+    <div id="basket-content" style="display: none; overflow-x: auto;">
+        <h4>Items</h4>
+        <div style="overflow-x: auto;">
+            <table class="w3-table w3-bordered w3-small w3-center" style="max-width:100%; min-width: 320px; margin:auto;">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Pcs.</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="basket-list"></tbody>
+            </table>
+        </div>
+        <p id="shipping-options" style="display: none;">
+            <label>
+                <input type="radio" name="shipping" value="0" onchange="updateShipping(0)" checked> Personal Pickup (Free)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="shipping" value="9" onchange="updateShipping(9)"> Shipping (+9 CHF)
+            </label>
+        </p>
+        <p><strong>Total:</strong> <span id="basket-total">0</span> CHF</p>
+        <button class="w3-button w3-blue" onclick="showCheckoutForm()">ORDER</button>
+        
+        <!-- Checkout Form -->
+        <div id="checkout-form" style="display: none; margin-top: 20px;">
+            <h4>Checkout</h4>
+            <form onsubmit="submitOrder(event)">
+                <label>Name:</label>
+                <input class="w3-input w3-border" type="text" id="customer-name" required>
+                <label>Email:</label>
+                <input class="w3-input w3-border" type="email" id="customer-email" required>
+                <label>Address:</label>
+                <textarea class="w3-input w3-border" id="customer-address" required></textarea>
+                <p><strong>Order Summary:</strong></p>
+                <p id="order-summary"></p>
+                <button class="w3-button w3-green" type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- BASKETSCRIPT -->
+<script>
+    let basket = [];
+    let shippingCost = 0;
+
+    function saveBasketToLocalStorage() {
+        localStorage.setItem("basket", JSON.stringify(basket));
+    }
+
+    function loadBasketFromLocalStorage() {
+        const storedBasket = localStorage.getItem("basket");
+        if (storedBasket) {
+            basket = JSON.parse(storedBasket);
+            updateBasketUI();
+        }
+    }
+
+    function addToBasket(product, price) {
+        const existingItem = basket.find(item => item.product === product);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            basket.push({ product, price, quantity: 1 });
+        }
+        saveBasketToLocalStorage();
+        updateBasketUI();
+    }
+
+    function updateItemQuantity(product, change) {
+        const item = basket.find(item => item.product === product);
+        if (item) {
+            item.quantity += change;
+            if (item.quantity <= 0) {
+                removeItemCompletely(product);
+            }
+        }
+        saveBasketToLocalStorage();
+        updateBasketUI();
+    }
+
+    function removeItemCompletely(product) {
+        basket = basket.filter(item => item.product !== product);
+        saveBasketToLocalStorage();
+        updateBasketUI();
+    }
+
+function updateBasketUI() {
+    const basketList = document.getElementById('basket-list');
+    const basketTotal = document.getElementById('basket-total');
+    const basketCount = document.getElementById('basket-count');
+    const shippingOptions = document.getElementById('shipping-options');
+    const orderSummary = document.getElementById('order-summary');
+
+    basketList.innerHTML = "";
+    let total = 0;
+    let itemCount = 0;
+    let summaryText = "";
+
+    basket.forEach(item => {
+        total += item.price * item.quantity;
+        itemCount += item.quantity; // Count total number of items
+        summaryText += `${item.quantity}x ${item.product} - ${item.price * item.quantity} CHF\n`;
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${item.product}</td>
+            <td>${item.quantity}</td>
+            <td>${item.price} CHF</td>
+            <td>
+                <button class="w3-hover-opacity w3-hover-green w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', 1)">+</button>
+                <button class="w3-hover-opacity w3-hover-orange  w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', -1)">-</button>
+                <button class="w3-hover-opacity w3-hover-red  w3-tiny w3-light-grey" onclick="removeItemCompletely('${item.product}')">X</button>
+            </td>
+        `;
+        basketList.appendChild(row);
+    });
+
+    basketTotal.textContent = total + shippingCost;
+    orderSummary.textContent = summaryText + `Shipping: ${shippingCost} CHF\nTotal: ${total + shippingCost} CHF`;
+    shippingOptions.style.display = basket.length > 0 ? "block" : "none";
+
+    // Update basket count and color
+    basketCount.textContent = itemCount;
+    basketCount.className = itemCount > 0 ? "w3-badge w3-red" : "w3-badge w3-gray";
+}
+
+
+    function toggleBasket() {
+        const basketContent = document.getElementById('basket-content');
+        const toggleIcon = document.getElementById('basket-toggle-icon');
+
+        if (basketContent.style.display === "none") {
+            basketContent.style.display = "block";
+            toggleIcon.textContent = "Hide";
+        } else {
+            basketContent.style.display = "none";
+            toggleIcon.textContent = "View";
+        }
+    }
+
+    function updateShipping(cost) {
+        shippingCost = cost;
+        updateBasketUI();
+    }
+
+    function showCheckoutForm() {
+        document.getElementById('checkout-form').style.display = "block";
+    }
+
+function submitOrder(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('customer-name').value;
+    const email = document.getElementById('customer-email').value;
+    const address = document.getElementById('customer-address').value;
+    const orderSummary = document.getElementById('order-summary').textContent;
+
+    const formData = {
+        name: name,
+        email: email,
+        address: address,
+        order: orderSummary
+    };
+
+    fetch("https://formspree.io/f/mkgobzqg", { // Replace with your Formspree form ID
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    }).then(response => {
+        if (response.ok) {
+            alert("Thanks for your order, we will send you the payment link shortly to your email");
+            basket = [];
+            saveBasketToLocalStorage();
+            updateBasketUI();
+            document.getElementById('checkout-form').reset();
+        } else {
+            alert("Error sending order. Please try again.");
+        }
+    });
+}
+    document.addEventListener("DOMContentLoaded", loadBasketFromLocalStorage);
+</script>
+<!-- BASKETSCRIPT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------FOOTER------------------------------------->
+<footer class="w3-container w3-center w3-light-grey w3-tiny">
+    <h2 class="w3-center">Contact us</h2>
+    <div class="w3-content" style="max-width:1000px">
+  
+    <div class="w3-row-padding">
+      
+      <div class="w3-quarter w3-center">
+        <a href="https://wa.me/41779766164/" class="w3-circle w3-large w3-hover-light-grey" style="text-decoration:none; background-color:#ADCDFF; color:black; margin:auto">Whatsapp</a>
+     </div> 
+      
+      <div class="w3-quarter w3-center">
+        <a href="tel:+41779766164"class="w3-circle w3-large w3-hover-light-grey" style="text-decoration:none; background-color:#ADCDFF; color:black; margin:auto">Phone</a>
+      </div>
+
+      <div class="w3-quarter w3-center">
+        <a href="mailto:info@flywithmiki.com" class="w3-circle w3-large w3-hover-light-grey" style="text-decoration:none; background-color:#ADCDFF; color:black; margin:auto">Email</a>
+      </div>
+      
+      <div class="w3-quarter w3-center">
+        <a href="https://maps.app.goo.gl/VwwLdoB2JXL1x1f77" target="_blank" class="w3-circle w3-large w3-hover-light-grey" style="text-decoration:none; background-color:#ADCDFF; color:black; margin:auto">Google reviews </a>
+      </div>
+
+
+  
+
+    </div>
+      
+  </div>
+  <p>© 2025 Miklos Mohos - FLYwithMIKI Gleitschirmschule. <br>All rights reserved.</p>
+  <p><a href="agb.html" target="_blank">General Terms and Conditions (GT&C / AGB)</a></p>
+   
+</footer>
+<!------------------------FOOTER------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+//Accordion egyszerre többet is tud kezelni
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Nyelv választó
+function handleButtonClick(language) {
+  const currentPath = window.location.pathname;
+
+  const lastSlashIndex = currentPath.lastIndexOf('/');
+  const basePath = currentPath.substring(0, lastSlashIndex + 1); // Extracting the base path
+  const fileName = currentPath.substring(lastSlashIndex + 1); // Extracting the filename
+
+  let newPath = currentPath;
+
+  if (language === "english") {
+    if (basePath.includes('/de/')) {
+      newPath = basePath.replace('/de/', '/'); // Remove "/de/" from the base path
+    }
+  } else if (language === "german") {
+    if (!basePath.includes('/de/')) {
+      newPath = `${basePath}de/`; // Add "/de/" to the base path
+    }
+  }
+
+  if (newPath !== currentPath) {
+    // Append the filename only if the path is modified
+    newPath += fileName;
+    // Redirect to the new path
+    window.location.href = newPath;
+  }
+}
+        
+</script>
+
+
+<!------------------------Google ad eventtracker-------------------------------------> 
+<script>
+window.addEventListener('load', function() {
+ document.addEventListener('mousedown', function(e) {
+    if (e.target.closest('[href*="//wa.me/"]')) {
+      gtag('event', 'conversion', {'send_to': 'AW-16744153817/BW7YCK732_IZENmFnrA-'});
+    }
+});
+  })
+</script>
+<script>
+  (function(){
+    document.addEventListener('click', function(e){
+      if(e.target.closest('a[href^="tel:"]')){
+  gtag('event', 'conversion', {'send_to': 'AW-16744153817/j67QCLT32_IZENmFnrA-'});
+      }
+    });
+  })();
+</script>
+<script>
+  (function(){
+    document.addEventListener('click', function(e){
+      if(e.target.closest('a[href^="mailto:"]')){
+ gtag('event', 'conversion', {'send_to': 'AW-16744153817/U-J9CLH32_IZENmFnrA-'});
+      }
+    });
+  })();
+</script>
+
+</body>
+
+</html>	
