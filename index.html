@@ -217,30 +217,32 @@
   
   <div class="w3-row-padding">
 
-    <div class="w3-col s12 m4">
-      <a href="./begguide.html" class="product-link">
-        <div class="w3-card product-card">
+      <div class="w3-col s12 m4">
+        <a href="./begguide.html" class="product-link">
+          <div class="w3-card product-card">
 
-          <div class="hover-container">
-            <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/book.webp" alt="Book">
-            <div class="hover-description">
-              This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.
+            <div class="hover-container">
+              <img class="w3-margin-top" src="https://flywithmiki.com/webshopimg/book.webp" alt="Book">
+              <div class="hover-description">
+                This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.
+              </div>
+            </div>  
+
+            <div class="w3-container w3-center">
+              <p>Paragliding: The Beginner's Guide <br> 
+                <span style="color:lightgrey">B. Wentzel, Ed Ewing</span> 
+              </p>
+              <p><b>42 CHF</b></p>
+              <button class="w3-button w3-light-blue w3-margin add-to-basket"
+                      data-product="Beginners Guide (book)" 
+                      data-price="42">
+                Add to Basket
+              </button>
             </div>
-          </div>  
 
-          <div class="w3-container w3-center">
-            <p>Paragliding: The Beginner's Guide <br> 
-              <span style="color:lightgrey">B. Wentzel, Ed Ewing</span> 
-            </p>
-            <p><b>42 CHF</b></p>
-            <button class="w3-button w3-light-blue w3-margin" style="" onclick="addToBasket('Beginners Guide (book)', 42); event.stopPropagation();">
-              Add to Basket
-            </button>
           </div>
-
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
 
     <div class="w3-col s12 m4">
@@ -577,8 +579,21 @@ function myFunction() {
 
 
 
-
-
+<!-- Hogy az add-to basket-ra ne nyíljkon a link -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Prevent the product link from opening when clicking the "Add to Basket" button
+  document.querySelectorAll(".add-to-basket").forEach(button => {
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();  // Prevent bubbling up to <a>
+      event.preventDefault();   // Prevent link navigation
+      const productName = this.getAttribute("data-product");
+      const productPrice = parseFloat(this.getAttribute("data-price"));
+      addToBasket(productName, productPrice);
+    });
+  });
+});
+</script>
 
 
 
