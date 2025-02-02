@@ -34,46 +34,55 @@
             .w3-third img:hover {opacity: 1}
           
             .menu {
-              position: fixed;
+              position: sticky;
               top: 0;
-              left: 50%;
-              transform: translateX(-50%);
               width: 100%;
-              max-width: 1000px; /* Ensures it stays within 1000px */
+              max-width: 1000px; /* Keeps the width within 1000px */
               display: flex;
               align-items: center;
+              justify-content: center; /* Centers the menu items horizontally */
               background-color: #d5e4e6;
               padding: 0 16px;
               z-index: 1000;
+              margin: 0 auto; /* Centers the menu in the viewport */
             }
+
             .menu-logo {
               flex: 1;
             }
+
             .menu-items {
               flex: 2;
               display: flex;
-              justify-content: center;
+              justify-content: left;
             }
+
             .menu-items a, .menu-about a {
               padding: 14px 16px;
               text-decoration: none;
               color: black;
               display: block;
             }
+
             .menu-items a:hover, .menu-about a:hover {
               background-color: #111;
             }
+
             .menu-about {
               flex: 1;
               display: flex;
               justify-content: flex-end;
             }
 
+            .header {
+              background-color: #f1f1f1;
+              padding: 30px;
+              text-align: center;
+            }
+
 
             #checkout-form { display: none; }
         </style>
-
-
 
 </head> 
 
@@ -81,13 +90,18 @@
 
 <body class="w3-white w3-content">
 
-<div class="menu w3-bar w3-center " style="max-width:1000px; margin:auto">
-  <div class="menu-logo">
-    <img src="https://flywithmiki.com/Images_v2/logo1.webp" alt="logoc" style="width:100%; max-width:300px">
+
+ <div class="header" style="max-width:1000px; margin:auto" id="head">
+     <img src="https://flywithmiki.com/Images_v2/logo1.webp" alt="logoc" style="width:100%; max-width:500px">
+     <br><h1 class="w3-center">Paragliding Accessories</h1>
+    
   </div>
+
+
+<div class="menu w3-bar " style="max-width:1000px; margin:auto">
   <div class="menu-items">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#news" class="w3-bar-item w3-button">News</a>
+    <a href="#head" class="w3-bar-item w3-button">Home</a>
+    <a href="https://flywithmiki.com" target="_blank" class="w3-bar-item w3-button">Learn to fly</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
   </div>
   <div class="menu-about">
@@ -97,10 +111,11 @@
   </div>
 </div>
 
-   <div class="w3-container w3-section w3-white w3-text-black w3-center w3-padding w3-margin-top" style="max-width:1000px; margin:auto" id="intro">
-     <br><h1 class="w3-left-align w3-margin w3-section">Paragliding Accessories</h1>
+
+
+<div class="w3-container w3-section w3-white w3-text-black w3-center w3-padding w3-margin-top" style="max-width:1000px; margin:auto" id="intro">
   <p class=" w3-justify w3-margin" >At FLYwithMIKI, we are committed to safety and responsible paragliding practices. While many webshops sell paragliding equipment without knowing their customers, we believe this approach overlooks the importance of proper guidance. Choosing the right glider, harness, or reserve parachute requires an expert assessment of your skills, experience, and flying style. That’s why we only offer books and accessories online, while all paragliding equipment purchases are handled personally. If you're looking for a new glider or harness, contact us directly—we take the time to ensure you get the best gear tailored to your needs.</p>
-   </div>
+</div>
 
 <!-- PRODUCTS ------------------------------------------------>
   <div class="w3-container w3-white w3-text-black w3-center w3-padding" style="max-width:1000px; margin:auto" id="products">
@@ -457,7 +472,7 @@ function submitOrder(event) {
 
 
 <!------------------------FOOTER------------------------------------->
-<footer class="w3-container w3-center w3-light-grey w3-tiny">
+<footer class="w3-container w3-center w3-light-grey w3-tiny" id="contact">
     <h2 class="w3-center">Contact us</h2>
     <div class="w3-content" style="max-width:1000px">
   
@@ -496,68 +511,6 @@ function submitOrder(event) {
 
 
 
-
-
-
-
-
-<script>
-
-
-//Accordion egyszerre többet is tud kezelni
-function myAccFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-green";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-green", "");
-  }
-}
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Nyelv választó
-function handleButtonClick(language) {
-  const currentPath = window.location.pathname;
-
-  const lastSlashIndex = currentPath.lastIndexOf('/');
-  const basePath = currentPath.substring(0, lastSlashIndex + 1); // Extracting the base path
-  const fileName = currentPath.substring(lastSlashIndex + 1); // Extracting the filename
-
-  let newPath = currentPath;
-
-  if (language === "english") {
-    if (basePath.includes('/de/')) {
-      newPath = basePath.replace('/de/', '/'); // Remove "/de/" from the base path
-    }
-  } else if (language === "german") {
-    if (!basePath.includes('/de/')) {
-      newPath = `${basePath}de/`; // Add "/de/" to the base path
-    }
-  }
-
-  if (newPath !== currentPath) {
-    // Append the filename only if the path is modified
-    newPath += fileName;
-    // Redirect to the new path
-    window.location.href = newPath;
-  }
-}
-        
-</script>
 
 
 <!------------------------Google ad eventtracker-------------------------------------> 
