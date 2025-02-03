@@ -1,18 +1,18 @@
 {
   "books": [
+	{
+      "name": "Paragliding: The Beginner's Guide",
+      "author": "Bastienne Wentzel & Ed Ewing",
+      "price": 42,
+      "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
+      "link": "begguide.html"
+    },
     {
       "name": "Understanding the Sky",
       "author": "Dennis Pagen",
       "price": 45,
-      "image": "https://flywithmiki.com/webshopimg/sky.webp",
+      "image": "https://shop.flywithmiki.com/img/uts/0.png",
       "link": "uts.html"
-    },
-	{
-      "name": "Mastering Thermals",
-      "author": "Bruce Goldsmith",
-      "price": 50,
-      "image": "https://flywithmiki.com/webshopimg/uts.webp",
-      "link": "book2.html"
     }
   ],
   "instruments": [
@@ -21,6 +21,13 @@
       "brand": "Stodeus",
       "price": 125,
       "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
+      "link": "bipbip.html"
+    },
+	{
+      "name": "Ultrabip",
+      "brand": "Stodeus",
+      "price": 305,
+      "image": "https://flywithmiki.com/webshopimg/ultra.webp",
       "link": "bipbip.html"
     }
   ]
