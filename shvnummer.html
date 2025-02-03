@@ -227,45 +227,99 @@
 
 
 <div class="w3-container product-container w3-card w3-round-large w3-padding">
-    <h2 class="w3-center">Concertina bag (280cm)<br> <span style="color:lightgrey">YowFLY</span> </h2>
+    <h2 class="w3-center">SHV number<br> <span style="color:lightgrey">HA</span> </h2>
     
     <div class="w3-content w3-display-container" style="max-width:600px">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/1.webp" style="width:100%">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/2.webp" style="width:100%">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/3.webp" style="width:100%">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/4.webp" style="width:100%">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/5.webp" style="width:100%">
-        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/concertina/6.webp" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/shvnummer/1.jpg" style="width:100%">
+        <img class="product-slide w3-animate-opacity" src="https://shop.flywithmiki.com/img/shvnummer/2.jpg" style="width:100%">
+      
         
         <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
     </div>
     
     <div class="thumbnail-container">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/1.webp" onclick="currentSlide(0)">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/2.webp" onclick="currentSlide(1)">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/3.webp" onclick="currentSlide(2)">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/4.webp" onclick="currentSlide(3)">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/5.webp" onclick="currentSlide(4)">
-        <img class="thumbnail" src="https://shop.flywithmiki.com/img/concertina/6.webp" onclick="currentSlide(5)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/shvnummer/1.jpg" onclick="currentSlide(0)">
+        <img class="thumbnail" src="https://shop.flywithmiki.com/img/shvnummer/2.jpg" onclick="currentSlide(1)">
+
         
     </div>
     
     <div class="w3-padding w3-large">
-        <p><strong>Price:</strong> CHF 60</p>
+        <p><strong>Price:</strong> CHF 1.5/digit</p>
         <p><strong>Description:</strong></p>
-        <p>Paragliding Concertina Packing Bags lets you pack your wing quickly, maintaining it in perfect condition ready for your next flight. It is necessary to keep the glider in good condition to improve its operational life.</p>
-        <p>Folding your wing using the concertina method maintains optimum performance and inflation characteristics by maintaining the shape of the leading edge and by minimizing panel stretching and fabric abrasion.
-        </p>
-        <p>High quality materials are used throughout, chosen for their durability and light weight.A flap system with buckles along 2/3rds of the length holds the wing in place neatly and integrated straps secure the folded bag. </p>
+
+        <p class="w3-justify">These digits, which must be displayed on your wing with a minimum height of 40 cm, are easy to apply and made from high-quality materials that guarantee durability. </p>
+        <p class="w3-justify">The sticker comes with a special adhesive that ensures a secure fit without damaging the fabric of your wing. Should you decide to sell your glider, the sticker can be effortlessly removed without leaving residue or harm to the material. This practical solution ensures compliance with regulations while maintaining the integrity of your equipment.</p>
+        <p class="w3-justify">The SHV number digit sticker is a <strong>mandatory requirement by Swiss law</strong>, ensuring that your glider is properly identified with its unique SHV number. </p>
+
+<!--SHV number calculator----------------------------------------------->
+    <div class="w3-container w3-light-grey w3-padding-16">
+        <div class="w3-content" style="max-width:900px">
+           <h2 class="w3-center"><b>SHV-number calculator</b></h2>    
+
+          <style> 
+             #result {font-size: 16px; /* Default font size for the text */}
+             #result b {font-size: 24px; /* Font size for the result */font-weight: bold; /* Make the result bold */} </style>
+          
+          <form class="w3-left-align" id="numberForm">
+            <label for="numberInput">Enter your SHV number:</label>
+            <input type="text" id="numberInput" maxlength="5" pattern="\d{1,5}" required="">
+            <button type="submit">Calculate</button>
+          </form>
+          
+          <div class="w3-left-align" id="result"></div>
 
 
-        
-            <button class="w3-button w3-light-blue w3-round w3-margin" style="" onclick="addToBasket('Concertina (bag)', 60); event.stopPropagation();">
-              Add to Basket
-            </button>
+          <script> document.getElementById('numberForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var inputNumber = document.getElementById('numberInput').value;
+    var summary = summarizeNumber(inputNumber);
+    
+    document.getElementById('result').innerHTML = "The number of digits you have to purchase: <b>" + summary + "</b>" + " pcs.";
+    });
+    function summarizeNumber(number) {
+    var lookupTable = {
+        '0': 6,
+        '1': 2,
+        '2': 5,
+        '3': 5,
+        '4': 4,
+        '5': 5,
+        '6': 6,
+        '7': 3,
+        '8': 7,
+        '9': 6
+    };
+    var sum = 0;
+    for (var i = 0; i < number.length; i++) {
+        var digit = number.charAt(i);
+        sum += lookupTable[digit] || 0;
+    }
+           return sum;} </script>
+        </div>
+    </div>
+
+
+<!--SHV number calculator----------------------------------------------->
+
+
+<!-- Input for the quantity -->
+<label for="quantity-shvnumber">Quantity:</label>
+<input type="number" id="quantity-shvnumber" min="1" max="99" value="1">
+
+<!-- Add to Basket button -->
+<button class="w3-button w3-light-blue w3-margin" style="margin:auto" onclick="addToBasket('SHV number (digit)', 1.5)">Add to Basket</button>
+
+
     </div>
 </div>
+
+
+
+
+<!--SLIDESHOW----------------------------------------------->
 
 <script>
     var slideIndex = 0;
@@ -301,8 +355,7 @@
     setTimeout(autoSlide, 6000);
 </script>
 
-<!-- PRODUCTS ------------------------------------------------>
-
+<!--SLIDESHOW----------------------------------------------->
 
 <!-- Basket Section -->
 <div class="basket w3-card w3-white w3-responsive" style="max-width:600px; margin:auto" id="basket-container">
@@ -351,7 +404,7 @@
     </div>
 </div>
 
-<!-- BASKETSCRIPT -->
+<!-- BASKET SCRIPT -->
 <script>
     let basket = [];
     let shippingCost = 0;
@@ -368,24 +421,42 @@
         }
     }
 
-    function addToBasket(product, price) {
-        const existingItem = basket.find(item => item.product === product);
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            basket.push({ product, price, quantity: 1 });
-        }
-        saveBasketToLocalStorage();
-        updateBasketUI();
+function addToBasket(product, price) {
+    // Get the quantity from the input field
+    const quantityInput = document.getElementById('quantity-shvnumber');
+    const quantity = parseInt(quantityInput.value);
+
+    // Ensure the quantity is valid (between 1 and 99)
+    if (quantity < 1 || quantity > 99) {
+        alert('Please select a valid quantity between 1 and 99.');
+        return;
     }
 
-    function updateItemQuantity(product, change) {
+    const existingItem = basket.find(item => item.product === product);
+    if (existingItem) {
+        existingItem.quantity += quantity; // Increase the quantity by the input quantity
+    } else {
+        basket.push({ product, price, quantity }); // Add new item with selected quantity
+    }
+    saveBasketToLocalStorage();
+    updateBasketUI();
+}
+
+
+    function updateItemQuantity(product) {
+        // Get the new quantity from the input field
+        const quantityInput = document.getElementById(`quantity-input-${product}`);
+        const quantity = parseInt(quantityInput.value);
+
+        // Ensure the quantity is valid (between 1 and 99)
+        if (quantity < 1 || quantity > 99) {
+            alert('Please select a valid quantity between 1 and 99.');
+            return;
+        }
+
         const item = basket.find(item => item.product === product);
         if (item) {
-            item.quantity += change;
-            if (item.quantity <= 0) {
-                removeItemCompletely(product);
-            }
+            item.quantity = quantity; // Update the quantity with the value from the input
         }
         saveBasketToLocalStorage();
         updateBasketUI();
@@ -397,45 +468,46 @@
         updateBasketUI();
     }
 
-function updateBasketUI() {
-    const basketList = document.getElementById('basket-list');
-    const basketTotal = document.getElementById('basket-total');
-    const basketCount = document.getElementById('basket-count');
-    const shippingOptions = document.getElementById('shipping-options');
-    const orderSummary = document.getElementById('order-summary');
+    function updateBasketUI() {
+        const basketList = document.getElementById('basket-list');
+        const basketTotal = document.getElementById('basket-total');
+        const basketCount = document.getElementById('basket-count');
+        const shippingOptions = document.getElementById('shipping-options');
+        const orderSummary = document.getElementById('order-summary');
 
-    basketList.innerHTML = "";
-    let total = 0;
-    let itemCount = 0;
-    let summaryText = "";
+        basketList.innerHTML = "";
+        let total = 0;
+        let itemCount = 0;
+        let summaryText = "";
 
-    basket.forEach(item => {
-        total += item.price * item.quantity;
-        itemCount += item.quantity; // Count total number of items
-        summaryText += `${item.quantity}x ${item.product} - ${item.price * item.quantity} CHF\n`;
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${item.product}</td>
-            <td>${item.quantity}</td>
-            <td>${item.price} CHF</td>
-            <td>
-                <button class="w3-hover-opacity w3-hover-green w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', 1)">+</button>
-                <button class="w3-hover-opacity w3-hover-orange  w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', -1)">-</button>
-                <button class="w3-hover-opacity w3-hover-red  w3-tiny w3-light-grey" onclick="removeItemCompletely('${item.product}')">X</button>
-            </td>
-        `;
-        basketList.appendChild(row);
-    });
+        basket.forEach(item => {
+            total += item.price * item.quantity;
+            itemCount += item.quantity; // Count total number of items
+            summaryText += `${item.quantity}x ${item.product} - ${item.price * item.quantity} CHF\n`;
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.product}</td>
+                <td>
+                    <input type="number" id="quantity-input-${item.product}" value="${item.quantity}" min="1" max="99" 
+                    onchange="updateItemQuantity('${item.product}')">
+                </td>
+                <td>${item.price} CHF</td>
+                <td>
+                    <button class="w3-hover-opacity w3-hover-green w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}')">Update</button>
+                    <button class="w3-hover-opacity w3-hover-red  w3-tiny w3-light-grey" onclick="removeItemCompletely('${item.product}')">X</button>
+                </td>
+            `;
+            basketList.appendChild(row);
+        });
 
-    basketTotal.textContent = total + shippingCost;
-    orderSummary.textContent = summaryText + `Shipping: ${shippingCost} CHF\nTotal: ${total + shippingCost} CHF`;
-    shippingOptions.style.display = basket.length > 0 ? "block" : "none";
+        basketTotal.textContent = total + shippingCost;
+        orderSummary.textContent = summaryText + `Shipping: ${shippingCost} CHF\nTotal: ${total + shippingCost} CHF`;
+        shippingOptions.style.display = basket.length > 0 ? "block" : "none";
 
-    // Update basket count and color
-    basketCount.textContent = itemCount;
-    basketCount.className = itemCount > 0 ? "w3-badge w3-red" : "w3-badge w3-gray";
-}
-
+        // Update basket count and color
+        basketCount.textContent = itemCount;
+        basketCount.className = itemCount > 0 ? "w3-badge w3-red" : "w3-badge w3-gray";
+    }
 
     function toggleBasket() {
         const basketContent = document.getElementById('basket-content');
@@ -459,44 +531,59 @@ function updateBasketUI() {
         document.getElementById('checkout-form').style.display = "block";
     }
 
-function submitOrder(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('customer-name').value;
-    const email = document.getElementById('customer-email').value;
-    const address = document.getElementById('customer-address').value;
-    const orderSummary = document.getElementById('order-summary').textContent;
+    function submitOrder(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('customer-name').value;
+        const email = document.getElementById('customer-email').value;
+        const address = document.getElementById('customer-address').value;
+        const orderSummary = document.getElementById('order-summary').textContent;
 
-    const formData = {
-        name: name,
-        email: email,
-        address: address,
-        order: orderSummary
-    };
+        const formData = {
+            name: name,
+            email: email,
+            address: address,
+            order: orderSummary
+        };
 
-    fetch("https://formspree.io/f/mkgobzqg", { // Replace with your Formspree form ID
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-    }).then(response => {
-        if (response.ok) {
-            alert("Thanks for your order, we will send you the payment link shortly to your email");
-            basket = [];
-            saveBasketToLocalStorage();
-            updateBasketUI();
-            document.getElementById('checkout-form').reset();
-        } else {
-            alert("Error sending order. Please try again.");
-        }
-    });
-}
+        fetch("https://formspree.io/f/mkgobzqg", { // Replace with your Formspree form ID
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        }).then(response => {
+            if (response.ok) {
+                alert("Thanks for your order, we will send you the payment link shortly to your email");
+                basket = [];
+                saveBasketToLocalStorage();
+                updateBasketUI();
+                document.getElementById('checkout-form').reset();
+            } else {
+                alert("Error sending order. Please try again.");
+            }
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", loadBasketFromLocalStorage);
 </script>
-<!-- BASKETSCRIPT -->
+<!-- BASKET SCRIPT -->
 
 
+
+
+
+
+
+
+<!-- Product szín választó -->
+<script>
+function addToBasketWithColor(productName, price, colorGroupName) {
+  let selectedColor = document.querySelector(`input[name="${colorGroupName}"]:checked`).value;
+  addToBasket(`${productName} - ${selectedColor}`, price);
+}
+</script>
+<!-- Product szín választó -->
 
 
 <!-- MENU SMALL SCREENSCRIPT -->
