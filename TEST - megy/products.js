@@ -20,19 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     productCard.innerHTML = `
                         <div class="w3-card product-card">
                             <div class="hover-container">
-							<a href="${product.link}">
                                 <img class="w3-margin-top" src="${product.image}" alt="${product.name}">
-                            </a>    
-								<div class="hover-description">${product.hover || ""}</div>
+                                <div class="hover-description">${product.author || product.brand || ""}</div>
                             </div>
                             <div class="w3-container w3-center">
-                                  <a href="${product.link}" class="product-link">${product.name} <br>
-                                        <span style="color:lightgrey">${product.author || product.brand || ""}</span>
-                                    
-                                </p>
-                                <p><b>${product.price} CHF</b></p></a>
-                                
-								<button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product.name}', ${product.price})">Add to Basket</button>
+                                <p>${product.name} <br> <span style="color:lightgrey">${product.author || product.brand || ""}</span></p>
+                                <p><b>${product.price} CHF</b></p>
+                                <button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product.name}', ${product.price})">Add to Basket</button>
                             </div>
                         </div>
                     `;
