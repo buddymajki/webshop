@@ -15,20 +15,50 @@
       "link": "uts.html"
     }
   ],
-  "instruments": [
-    {
-      "name": "Bipbip",
-      "brand": "Stodeus",
-      "price": 125,
-      "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
-      "link": "bipbip.html"
+  "accessories": [
+	{
+      "name": "Fastbag (solo)",
+      "author": "FLYwithMIKI",
+      "price": 105,
+      "image": "https://shop.flywithmiki.com/img/bag.webp",
+      "link": "solobag.html"
     },
+	{
+      "name": "Concertina bag (280cm)",
+      "author": "YowFly",
+      "price": 60,
+      "image": "https://shop.flywithmiki.com/img/conc.webp",
+      "link": "conc.html"
+    },
+    {
+      "name": "SHV number digits",
+      "author": "HA",
+      "price": 1.5,
+      "image": "https://shop.flywithmiki.com/img/uts/0.png",
+      "link": "shvnummer.html"
+    }
+  ],
+  "instruments": [
 	{
       "name": "Ultrabip",
       "brand": "Stodeus",
       "price": 305,
-      "image": "https://flywithmiki.com/webshopimg/ultra.webp",
+      "image": "https://shop.flywithmiki.com/img/ultrabip.webp",
       "link": "bipbip.html"
+    },
+    {
+      "name": "Bipbip",
+      "brand": "Stodeus",
+      "price": 125,
+      "image": "https://shop.flywithmiki.com/img/bipbip.webp",
+      "link": "bipbip.html"
+    },
+    {
+      "name": "PMR Radio",
+      "brand": "Basisrausch (Wintec)",
+      "price": 229,
+      "image": "https://shop.flywithmiki.com/img/wintec.webp",
+      "link": "wintec.html"
     }
   ]
 }
