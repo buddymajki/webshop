@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Paragliding Book",
+        "price": 50
+    },
+    {
+        "id": 2,
+        "name": "Paragliding Gloves",
+        "price": 30
+    },
+    {
+        "id": 3,
+        "name": "Flight Logbook",
+        "price": 25
+    }
+]
