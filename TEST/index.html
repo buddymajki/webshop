@@ -473,22 +473,6 @@ function myFunction() {
 
 
 
-<!-- Hogy az add-to basket-ra ne nyíljkon a link -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Prevent the product link from opening when clicking the "Add to Basket" button
-  document.querySelectorAll(".add-to-basket").forEach(button => {
-    button.addEventListener("click", function (event) {
-      event.stopPropagation();  // Prevent bubbling up to <a>
-      event.preventDefault();   // Prevent link navigation
-      const productName = this.getAttribute("data-product");
-      const productPrice = parseFloat(this.getAttribute("data-price"));
-      addToBasket(productName, productPrice);
-    });
-  });
-});
-</script>
-
 
 
 
