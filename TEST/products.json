@@ -2,7 +2,7 @@
   "books": [
 	{
       "name": "The Beginners Guide",
-      "author": "Bastienne Wentzel & Ed Ewing",
+      "author": "B. Wentzel & E. Ewing",
       "price": 42,
       "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
       "link": "begguide.html"
