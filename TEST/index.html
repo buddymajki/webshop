@@ -44,6 +44,11 @@
   }
 }
 
+
+        .product-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; width: 200px; text-align: center; }
+        .product img { max-width: 100%; height: auto; }
+		
 .product-card {
   display: flex;
   flex-direction: column;
@@ -246,9 +251,10 @@
 <!-- PRODUCTS ------------------------------------------------>
 
 
-<div id="products-container" class="w3-row-padding"></div>
+    <h1>Product List</h1>
+    <div id="product-container">Loading...</div>
 
-<script src="products.js"></script>
+    <script src="script.js"></script>
 
 
 

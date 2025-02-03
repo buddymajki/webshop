@@ -2,41 +2,40 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("products.json")
         .then(response => response.json())
         .then(data => {
-            const container = document.getElementById("products-container");
-
+            const container = document.getElementById("product-container");
+            container.innerHTML = ""; // Clear loading message
+            
             for (const category in data) {
-                // Create section for each category
-                const section = document.createElement("div");
-                section.className = "w3-container w3-margin-top";
-                section.innerHTML = `<h3>${category.charAt(0).toUpperCase() + category.slice(1)}</h3>`;
+                // Create Category Title
+                const categoryTitle = document.createElement("h2");
+                categoryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                container.appendChild(categoryTitle);
 
-                const row = document.createElement("div");
-                row.className = "w3-row-padding";
+                // Create Product Grid
+                const productGrid = document.createElement("div");
+                productGrid.classList.add("product-grid");
 
                 data[category].forEach(product => {
-                    const productCard = document.createElement("div");
-                    productCard.className = "w3-col s12 m4";
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add("product");
 
-                    productCard.innerHTML = `
-                        <div class="w3-card product-card">
-                            <div class="hover-container">
-                                <img class="w3-margin-top" src="${product.image}" alt="${product.name}">
-                                <div class="hover-description">${product.author || product.brand || ""}</div>
-                            </div>
-                            <div class="w3-container w3-center">
-                                <p>${product.name} <br> <span style="color:lightgrey">${product.author || product.brand || ""}</span></p>
-                                <p><b>${product.price} CHF</b></p>
-                                <button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product.name}', ${product.price})">Add to Basket</button>
-                            </div>
-                        </div>
+                    productDiv.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" width="150">
+                        <h3>${product.name}</h3>
+                        ${product.author ? `<p>Author: ${product.author}</p>` : ""}
+                        ${product.brand ? `<p>Brand: ${product.brand}</p>` : ""}
+                        <p>Price: ${product.price} CHF</p>
+                        <a href="${product.link}">View Product</a>
                     `;
 
-                    row.appendChild(productCard);
+                    productGrid.appendChild(productDiv);
                 });
 
-                section.appendChild(row);
-                container.appendChild(section);
+                container.appendChild(productGrid);
             }
         })
-        .catch(error => console.error("Error loading products:", error));
+        .catch(error => {
+            console.error("Error loading products:", error);
+            document.getElementById("product-container").textContent = "Failed to load products.";
+        });
 });

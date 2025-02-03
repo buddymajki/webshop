@@ -6,42 +6,66 @@
       "price": 45,
       "image": "https://flywithmiki.com/webshopimg/sky.webp",
       "link": "uts.html"
+    },
+    {
+      "name": "Paragliding: The Beginner's Guide",
+      "author": "David Robinson",
+      "price": 35,
+      "image": "https://flywithmiki.com/webshopimg/book1.webp",
+      "link": "book1.html"
+    },
+    {
+      "name": "Mastering Thermals",
+      "author": "Bruce Goldsmith",
+      "price": 50,
+      "image": "https://flywithmiki.com/webshopimg/book2.webp",
+      "link": "book2.html"
     }
-	
-	{
-      "name": "asdasd",
-      "author": "Denxcvxcv",
-      "price": 40,
-      "image": "https://flywithmiki.com/webshopimg/sky.webp",
-      "link": "uts.html"
-    }
-	
-	{
-      "name": "Ufggb",
-      "author": "Dennis Pagen",
-      "price": 45,
-      "image": "https://flywithmiki.com/webshopimg/begguide.webp",
-      "link": "uts.html"
+  ],
+  "accessories": [
+    {
+      "name": "Paragliding Gloves",
+      "brand": "SkyHands",
+      "price": 30,
+      "image": "https://flywithmiki.com/webshopimg/gloves.webp",
+      "link": "gloves.html"
+    },
+    {
+      "name": "Speed Bar",
+      "brand": "FlyTech",
+      "price": 25,
+      "image": "https://flywithmiki.com/webshopimg/speedbar.webp",
+      "link": "speedbar.html"
+    },
+    {
+      "name": "Harness Backpack",
+      "brand": "Ozone",
+      "price": 90,
+      "image": "https://flywithmiki.com/webshopimg/backpack.webp",
+      "link": "backpack.html"
     }
   ],
   "instruments": [
     {
-      "name": "Bipbip",
+      "name": "BipBip",
       "brand": "Stodeus",
       "price": 125,
       "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
       "link": "bipbip.html"
+    },
+    {
+      "name": "XCTracer Mini",
+      "brand": "XCTracer",
+      "price": 220,
+      "image": "https://flywithmiki.com/webshopimg/xctracer.webp",
+      "link": "xctracer.html"
+    },
+    {
+      "name": "Skytraxx 2.1",
+      "brand": "Skytraxx",
+      "price": 380,
+      "image": "https://flywithmiki.com/webshopimg/skytraxx.webp",
+      "link": "skytraxx.html"
     }
   ]
-  
-  
-  "test": [
-    {
-      "name": "Bipbasdasdip",
-      "brand": "Stodeus",
-      "price": 12005,
-      "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
-      "link": "bipbip.html"
-    }
-  ]  
 }
