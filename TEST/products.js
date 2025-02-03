@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="w3-card product-card">
                             <div class="hover-container">
                                 <img class="w3-margin-top" src="${product.image}" alt="${product.name}">
-                                <div class="hover-description">${product.author || product.brand || ""}</div>
+                                <div class="hover-description">${product.hover || product.brand || ""}</div>
                             </div>
                             <div class="w3-container w3-center">
                                 <p>${product.name} <br> <span style="color:lightgrey">${product.author || product.brand || ""}</span></p>

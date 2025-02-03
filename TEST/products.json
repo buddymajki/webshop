@@ -5,7 +5,8 @@
       "author": "B. Wentzel & E. Ewing",
       "price": 42,
       "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
-      "link": "begguide.html"
+      "link": "begguide.html",
+	  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis."
     },
     {
       "name": "Understanding the Sky",
