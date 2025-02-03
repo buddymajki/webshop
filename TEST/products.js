@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="hover-container">
                                 <a href="${product.link}">
                                     <img class="w3-margin-top product-image" src="${product.image}" alt="${product.name}">
-                                </a>
-                                <div class="hover-description">${product.hover || ""}</div>
+                                <div class="hover-description">${product.hover || ""}</div> </a>
                             </div>
                             <div class="w3-container w3-center">
                                 <p>
