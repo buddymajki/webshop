@@ -13,7 +13,8 @@
       "author": "Dennis Pagen",
       "price": 45,
       "image": "https://shop.flywithmiki.com/img/uts/0.png",
-      "link": "uts.html"
+      "link": "uts.html",
+	  "hover": "Meteorology is the cornerstone of our sport. To become a safe pilot, we should understand what is going on. This book covers it"	
     }
   ],
   "accessories": [
@@ -22,21 +23,24 @@
       "author": "FLYwithMIKI",
       "price": 105,
       "image": "https://shop.flywithmiki.com/img/bag.webp",
-      "link": "solobag.html"
+      "link": "solobag.html",
+	  "hover": "The perfect solution if you do not want to waste too much time with packing before and after flying."
     },
 	{
       "name": "Concertina bag (280cm)",
       "author": "YowFly",
       "price": 60,
       "image": "https://shop.flywithmiki.com/img/conc.webp",
-      "link": "conc.html"
+      "link": "conc.html",
+	  "hover": "Store your glider in the best way to keep it in shape for several years."
     },
     {
       "name": "SHV number digits",
       "author": "HA",
       "price": 1.5,
       "image": "https://shop.flywithmiki.com/img/uts/0.png",
-      "link": "shvnummer.html"
+      "link": "shvnummer.html",
+	  "hover": "Put your SHV number on your glider to fulfill your legal duties."
     }
   ],
   "instruments": [
@@ -45,21 +49,24 @@
       "brand": "Stodeus",
       "price": 305,
       "image": "https://shop.flywithmiki.com/img/ultrabip.webp",
-      "link": "bipbip.html"
+      "link": "bipbip.html",
+	  "hover": "The best immediate vario with built-in GPS, Bluetooth, and other features for every hike and fly and XC pilots."
     },
     {
       "name": "Bipbip",
       "brand": "Stodeus",
       "price": 125,
       "image": "https://shop.flywithmiki.com/img/bipbip.webp",
-      "link": "bipbip.html"
+      "link": "bipbip.html",
+	  "hover": "Solar powered variometer for pilots who likes light weight, and simplicity."
     },
     {
       "name": "PMR Radio",
       "brand": "Basisrausch (Wintec)",
       "price": 229,
       "image": "https://shop.flywithmiki.com/img/wintec.webp",
-      "link": "wintec.html"
+      "link": "wintec.html",
+	  "hover": "Robust PMR radio! The must to have equipment if you want to talk with your instructors or friends during flying."
     }
   ]
 }
