@@ -6,6 +6,13 @@
       "price": 45,
       "image": "https://flywithmiki.com/webshopimg/sky.webp",
       "link": "uts.html"
+    },
+	{
+      "name": "Mastering Thermals",
+      "author": "Bruce Goldsmith",
+      "price": 50,
+      "image": "https://flywithmiki.com/webshopimg/uts.webp",
+      "link": "book2.html"
     }
   ],
   "instruments": [
