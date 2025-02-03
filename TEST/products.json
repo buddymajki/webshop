@@ -1,17 +1,20 @@
-[
+{
+  "books": [
     {
-        "id": 1,
-        "name": "Paragliding Book",
-        "price": 50
-    },
-    {
-        "id": 2,
-        "name": "Paragliding Gloves",
-        "price": 30
-    },
-    {
-        "id": 3,
-        "name": "Flight Logbook",
-        "price": 25
+      "name": "Understanding the Sky",
+      "author": "Dennis Pagen",
+      "price": 45,
+      "image": "https://flywithmiki.com/webshopimg/sky.webp",
+      "link": "uts.html"
     }
-]
+  ],
+  "instruments": [
+    {
+      "name": "Bipbip",
+      "brand": "Stodeus",
+      "price": 125,
+      "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
+      "link": "bipbip.html"
+    }
+  ]
+}
