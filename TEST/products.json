@@ -7,6 +7,22 @@
       "image": "https://flywithmiki.com/webshopimg/sky.webp",
       "link": "uts.html"
     }
+	
+	{
+      "name": "asdasd",
+      "author": "Denxcvxcv",
+      "price": 40,
+      "image": "https://flywithmiki.com/webshopimg/sky.webp",
+      "link": "uts.html"
+    }
+	
+	{
+      "name": "Ufggb",
+      "author": "Dennis Pagen",
+      "price": 45,
+      "image": "https://flywithmiki.com/webshopimg/begguide.webp",
+      "link": "uts.html"
+    }
   ],
   "instruments": [
     {
@@ -17,4 +33,15 @@
       "link": "bipbip.html"
     }
   ]
+  
+  
+  "test": [
+    {
+      "name": "Bipbasdasdip",
+      "brand": "Stodeus",
+      "price": 12005,
+      "image": "https://flywithmiki.com/webshopimg/bipbip.webp",
+      "link": "bipbip.html"
+    }
+  ]  
 }
