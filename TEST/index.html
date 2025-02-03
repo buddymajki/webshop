@@ -306,21 +306,81 @@
 
 <!-- BASKETSCRIPT -->
 <script>
-    let basket = [];
-    let shippingCost = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize the basket if not already done
+    let basket = JSON.parse(localStorage.getItem("basket")) || [];
 
+    // Function to save the basket to localStorage
     function saveBasketToLocalStorage() {
         localStorage.setItem("basket", JSON.stringify(basket));
     }
 
-    function loadBasketFromLocalStorage() {
-        const storedBasket = localStorage.getItem("basket");
-        if (storedBasket) {
-            basket = JSON.parse(storedBasket);
-            updateBasketUI();
-        }
+    // Function to update the UI of the basket (implement as needed)
+    function updateBasketUI() {
+        console.log("Basket updated:", basket);
+        // Add logic here to update the UI, for example updating the basket count in the header
     }
 
+    fetch("products.json")
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById("products-container");
+
+            for (const category in data) {
+                // Create section for each category
+                const section = document.createElement("div");
+                section.className = "w3-container w3-margin-top";
+                section.innerHTML = `<h3>${category.charAt(0).toUpperCase() + category.slice(1)}</h3>`;
+
+                const row = document.createElement("div");
+                row.className = "w3-row-padding";
+
+                data[category].forEach(product => {
+                    const productCard = document.createElement("div");
+                    productCard.className = "w3-col s12 m4";
+
+                    productCard.innerHTML = `
+                        <div class="w3-card product-card">
+                            <div class="hover-container">
+                                <a href="${product.link}">
+                                    <img class="w3-margin-top product-image" src="${product.image}" alt="${product.name}">
+                                <div class="hover-description">${product.hover || ""}</div> </a>
+                            </div>
+                            <div class="w3-container w3-center">
+                                <p>
+                                    <a href="${product.link}" class="product-link">${product.name} <br>
+                                        <span style="color:lightgrey">${product.author || product.brand || ""}</span>
+                                    </a>
+                                </p>
+                                <p><b>${product.price} CHF</b></p>
+                                <button class="w3-button w3-light-blue w3-margin add-to-basket"
+                                    data-product="${product.name}"
+                                    data-price="${product.price}">
+                                    Add to Basket
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    row.appendChild(productCard);
+                });
+
+                section.appendChild(row);
+                container.appendChild(section);
+            }
+
+            // Attach click event listeners to the "Add to Basket" buttons
+            document.querySelectorAll('.add-to-basket').forEach(button => {
+                button.addEventListener('click', function () {
+                    const product = button.getAttribute('data-product');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    addToBasket(product, price);
+                });
+            });
+        })
+        .catch(error => console.error("Error loading products:", error));
+
+    // Function to handle adding to the basket
     function addToBasket(product, price) {
         const existingItem = basket.find(item => item.product === product);
         if (existingItem) {
@@ -331,122 +391,9 @@
         saveBasketToLocalStorage();
         updateBasketUI();
     }
-
-    function updateItemQuantity(product, change) {
-        const item = basket.find(item => item.product === product);
-        if (item) {
-            item.quantity += change;
-            if (item.quantity <= 0) {
-                removeItemCompletely(product);
-            }
-        }
-        saveBasketToLocalStorage();
-        updateBasketUI();
-    }
-
-    function removeItemCompletely(product) {
-        basket = basket.filter(item => item.product !== product);
-        saveBasketToLocalStorage();
-        updateBasketUI();
-    }
-
-function updateBasketUI() {
-    const basketList = document.getElementById('basket-list');
-    const basketTotal = document.getElementById('basket-total');
-    const basketCount = document.getElementById('basket-count');
-    const shippingOptions = document.getElementById('shipping-options');
-    const orderSummary = document.getElementById('order-summary');
-
-    basketList.innerHTML = "";
-    let total = 0;
-    let itemCount = 0;
-    let summaryText = "";
-
-    basket.forEach(item => {
-        total += item.price * item.quantity;
-        itemCount += item.quantity; // Count total number of items
-        summaryText += `${item.quantity}x ${item.product} - ${item.price * item.quantity} CHF\n`;
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${item.product}</td>
-            <td>${item.quantity}</td>
-            <td>${item.price} CHF</td>
-            <td>
-                <button class="w3-hover-opacity w3-hover-green w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', 1)">+</button>
-                <button class="w3-hover-opacity w3-hover-orange  w3-tiny w3-light-grey" onclick="updateItemQuantity('${item.product}', -1)">-</button>
-                <button class="w3-hover-opacity w3-hover-red  w3-tiny w3-light-grey" onclick="removeItemCompletely('${item.product}')">X</button>
-            </td>
-        `;
-        basketList.appendChild(row);
-    });
-
-    basketTotal.textContent = total + shippingCost;
-    orderSummary.textContent = summaryText + `Shipping: ${shippingCost} CHF\nTotal: ${total + shippingCost} CHF`;
-    shippingOptions.style.display = basket.length > 0 ? "block" : "none";
-
-    // Update basket count and color
-    basketCount.textContent = itemCount;
-    basketCount.className = itemCount > 0 ? "w3-badge w3-red" : "w3-badge w3-gray";
-}
-
-
-    function toggleBasket() {
-        const basketContent = document.getElementById('basket-content');
-        const toggleIcon = document.getElementById('basket-toggle-icon');
-
-        if (basketContent.style.display === "none") {
-            basketContent.style.display = "block";
-            toggleIcon.textContent = "Hide";
-        } else {
-            basketContent.style.display = "none";
-            toggleIcon.textContent = "View";
-        }
-    }
-
-    function updateShipping(cost) {
-        shippingCost = cost;
-        updateBasketUI();
-    }
-
-    function showCheckoutForm() {
-        document.getElementById('checkout-form').style.display = "block";
-    }
-
-function submitOrder(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('customer-name').value;
-    const email = document.getElementById('customer-email').value;
-    const address = document.getElementById('customer-address').value;
-    const orderSummary = document.getElementById('order-summary').textContent;
-
-    const formData = {
-        name: name,
-        email: email,
-        address: address,
-        order: orderSummary
-    };
-
-    fetch("https://formspree.io/f/mkgobzqg", { // Replace with your Formspree form ID
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-    }).then(response => {
-        if (response.ok) {
-            alert("Thanks for your order, we will send you the payment link shortly to your email");
-            basket = [];
-            saveBasketToLocalStorage();
-            updateBasketUI();
-            document.getElementById('checkout-form').reset();
-        } else {
-            alert("Error sending order. Please try again.");
-        }
-    });
-}
-    document.addEventListener("DOMContentLoaded", loadBasketFromLocalStorage);
+});
 </script>
+
 <!-- BASKETSCRIPT -->
 
 
@@ -477,21 +424,6 @@ function myFunction() {
 
 
 
-<!-- Hogy az add-to basket-ra ne nyíljkon a link -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Prevent the product link from opening when clicking the "Add to Basket" button
-  document.querySelectorAll(".add-to-basket").forEach(button => {
-    button.addEventListener("click", function (event) {
-      event.stopPropagation();  // Prevent bubbling up to <a>
-      event.preventDefault();   // Prevent link navigation
-      const productName = this.getAttribute("data-product");
-      const productPrice = parseFloat(this.getAttribute("data-price"));
-      addToBasket(productName, productPrice);
-    });
-  });
-});
-</script>
 
 
 

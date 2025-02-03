@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </a>
                                 </p>
                                 <p><b>${product.price} CHF</b></p>
-                                <button class="w3-button w3-light-blue w3-margin add-to-basket"
+                                <button class="w3-button w3-light-blue w3-margin"
                                     data-product="${product.name}"
                                     data-price="${product.price}">
                                     Add to Basket
