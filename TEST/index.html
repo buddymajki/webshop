@@ -16,30 +16,5 @@
 
 <script src="products.js"></script>
 
-
-
-    <div id="product-container">Loading...</div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("products.json")
-                .then(response => response.json())
-                .then(products => {
-                    const container = document.getElementById("product-container");
-                    container.innerHTML = ""; // Clear "Loading..."
-                    products.forEach(product => {
-                        const div = document.createElement("div");
-                        div.classList.add("product");
-                        div.innerHTML = `<h3>${product.name}</h3>
-                                         <p>Price: ${product.price} CHF</p>`;
-                        container.appendChild(div);
-                    });
-                })
-                .catch(error => {
-                    document.getElementById("product-container").innerHTML = "Failed to load products.";
-                    console.error("Error loading JSON:", error);
-                });
-        });
-    </script>
 </body>
 </html>
