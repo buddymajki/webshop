@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script defer src="product.js"></script>
+</head>
+<body>
+    <div class="w3-container product-container w3-card w3-round-large w3-padding">
+        <h2 class="w3-center" id="product-title"></h2>
+        <h4 class="w3-center" id="product-brand"></h4>
+        
+        <div class="w3-content w3-display-container" style="max-width:600px">
+            <img id="product-image" class="w3-image" src="" style="width:100%">
+        </div>
+
+        <p><strong>Price:</strong> <span id="product-price"></span> CHF</p>
+        <p><strong>Description:</strong></p>
+        <p id="product-description"></p>
+        
+        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
+    </div>
+</body>
+</html>
