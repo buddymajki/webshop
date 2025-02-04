@@ -2,7 +2,7 @@
   "books": [
 	{
       "name": "The Beginners Guide",
-      "author": "B. Wentzel & E. Ewing",
+      "brand": "B. Wentzel & E. Ewing",
       "price": 42,
       "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
       "link": "begguide.html",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Understanding the Sky",
-      "author": "Dennis Pagen",
+      "brand": "Dennis Pagen",
       "price": 45,
       "image": "https://shop.flywithmiki.com/img/uts/0.png",
       "link": "uts.html",
@@ -20,7 +20,7 @@
   "accessories": [
 	{
       "name": "Fastbag (solo)",
-      "author": "FLYwithMIKI",
+      "brand": "FLYwithMIKI",
       "price": 105,
       "image": "https://shop.flywithmiki.com/img/bag.webp",
       "link": "solobag.html",
@@ -28,7 +28,7 @@
     },
 	{
       "name": "Concertina bag (280cm)",
-      "author": "YowFly",
+      "brand": "YowFly",
       "price": 60,
       "image": "https://shop.flywithmiki.com/img/conc.webp",
       "link": "conc.html",
@@ -36,7 +36,7 @@
     },
     {
       "name": "SHV number digits",
-      "author": "HA",
+      "brand": "HA",
       "price": 1.5,
       "image": "https://shop.flywithmiki.com/img/uts/0.png",
       "link": "shvnummer.html",

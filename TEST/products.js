@@ -42,5 +42,4 @@ fetch("products.json")
         }
     })
     .catch(error => console.error("Error loading products:", error));
-
 });
