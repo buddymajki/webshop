@@ -6,7 +6,8 @@
       "price": 42,
       "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
       "link": "begguide.html",
-	  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis."	
+	  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.",
+	  "description": "BLABLABLABLABLABLABLABLA"
     },
     {
       "name": "Understanding the Sky",
