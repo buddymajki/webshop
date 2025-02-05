@@ -242,41 +242,21 @@
 
 
 
-<div class="w3-container product-container w3-card w3-round-large w3-padding">
-    <h2 class="w3-center" id="product-title"></h2>
-    
-    <div class="w3-content w3-display-container" style="max-width:600px">
-        <div id="image-container"></div>
+    <div class="w3-container product-container w3-card w3-round-large w3-padding">
+        <h2 class="w3-center" id="product-title"></h2>
+        <h4 class="w3-center" id="product-brand"></h4>
         
-        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
+        <div class="w3-content w3-display-container" style="max-width:600px">
+            <img id="product-image" class="w3-image" src="" style="width:100%">
+        </div>
 
-    <div id="thumbnail-container" class="thumbnail-container"></div>
-    
-    <div class="w3-padding w3-large">
-        <p><strong>Price:</strong> <span id="product-price"></span></p>
+        <p><strong>Price:</strong> <span id="product-price"></span> CHF</p>
         <p><strong>Description:</strong></p>
         <p id="product-description"></p>
         
-        <h3>Chapter Highlights:</h3>
-        <ul>
-            <li><strong>Understanding the air:</strong> Learn how the air moves and how it affects paragliding.</li>
-            <li><strong>All the gear you need:</strong> Get insights into different paragliders, harnesses, and essential equipment.</li>
-            <li><strong>Getting started:</strong> Learn about training courses, launching, turning, and landing safely.</li>
-            <li><strong>Learning about the weather:</strong> A comprehensive meteorology primer for paragliders.</li>
-            <li><strong>Becoming a qualified pilot:</strong> Master advanced techniques and safety maneuvers.</li>
-            <li><strong>Going places:</strong> Understand air law, airspace, and navigation tools.</li>
-            <li><strong>Getting your licence:</strong> Follow internationally recognized training principles.</li>
-            <li><strong>The story of paragliding:</strong> Discover how the sport evolved from its origins to today’s adventures.</li>
-        </ul>
-        
-        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket('Beginners Guide (book)', 42); event.stopPropagation();">
-          Add to Basket
-        </button>
+        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
     </div>
-</div>
-
+	
 	
 
 <!-- Basket Section -->
