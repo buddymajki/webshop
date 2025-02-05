@@ -323,16 +323,26 @@
         }
     }
 
-    function addToBasket(product, price) {
-        const existingItem = basket.find(item => item.product === product);
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            basket.push({ product, price, quantity: 1 });
-        }
-        saveBasketToLocalStorage();
-        updateBasketUI();
+function addToBasket() {
+    const productName = document.getElementById("product-title").textContent;
+    const productPrice = parseFloat(document.getElementById("product-price").textContent);
+
+    if (!productName || isNaN(productPrice)) {
+        console.error("Product details are missing or incorrect.");
+        return;
     }
+
+    const existingItem = basket.find(item => item.product === productName);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        basket.push({ product: productName, price: productPrice, quantity: 1 });
+    }
+
+    saveBasketToLocalStorage();
+    updateBasketUI();
+}
+
 
     function updateItemQuantity(product, change) {
         const item = basket.find(item => item.product === product);
