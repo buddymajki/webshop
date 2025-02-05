@@ -10,7 +10,7 @@ if (productId) {
             const product = data[category][index];
 
             if (product) {
-                document.getElementById("product-title").textContent = product.name;
+                document.getElementById("product-name").textContent = product.name;
                 document.getElementById("product-brand").textContent = product.brand || "";
                 document.getElementById("product-image").src = product.image;
                 document.getElementById("product-description").textContent = product.description;
