@@ -254,28 +254,27 @@
         <p><strong>Description:</strong></p>
         <p id="product-description"></p>
         
-
-		<button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
+        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
     </div>
 	
 	
 
-	<!-- Basket Section -->
-	<div class="basket w3-card w3-white w3-responsive" style="max-width:600px; margin:auto" id="basket-container">
-		<div id="basket-content" style="display: none; overflow-x: auto;">
-			<h4>Items</h4>
-			<div style="overflow-x: auto;">
-				<table class="w3-table w3-bordered w3-small w3-center" style="max-width:100%; min-width: 320px; margin:auto;">
-					<thead>
-						<tr>
-							<th>Product</th>
-							<th>Pcs.</th>
-							<th>Price</th>
-							<th>Actions</th>
-						</tr>
-					</thead>
-					<tbody id="basket-list"></tbody>
-				</table>
+<!-- Basket Section -->
+<div class="basket w3-card w3-white w3-responsive" style="max-width:600px; margin:auto" id="basket-container">
+    <div id="basket-content" style="display: none; overflow-x: auto;">
+        <h4>Items</h4>
+        <div style="overflow-x: auto;">
+            <table class="w3-table w3-bordered w3-small w3-center" style="max-width:100%; min-width: 320px; margin:auto;">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Pcs.</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="basket-list"></tbody>
+            </table>
         </div>
         <p id="shipping-options" style="display: none;">
             <label>
@@ -324,26 +323,16 @@
         }
     }
 
-function addToBasket() {
-    const productName = document.getElementById("product-title").textContent;
-    const productPrice = parseFloat(document.getElementById("product-price").textContent);
-
-    if (!productName || isNaN(productPrice)) {
-        console.error("Product details are missing or incorrect.");
-        return;
+    function addToBasket(product, price) {
+        const existingItem = basket.find(item => item.product === product);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            basket.push({ product, price, quantity: 1 });
+        }
+        saveBasketToLocalStorage();
+        updateBasketUI();
     }
-
-    const existingItem = basket.find(item => item.product === productName);
-    if (existingItem) {
-        existingItem.quantity++;
-    } else {
-        basket.push({ product: productName, price: productPrice, quantity: 1 });
-    }
-
-    saveBasketToLocalStorage();
-    updateBasketUI();
-}
-
 
     function updateItemQuantity(product, change) {
         const item = basket.find(item => item.product === product);
