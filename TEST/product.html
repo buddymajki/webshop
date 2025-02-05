@@ -212,7 +212,7 @@
 
 <!-- MENU----------------------------->
      <div class="topnav" id="myTopnav">
-       <a href="#head">Home</a>
+       <a href="./">Home</a>
 
        <div class="dropdown">
          <button class="dropbtn">Products
@@ -254,7 +254,7 @@
         <p><strong>Description:</strong></p>
         <p id="product-description"></p>
         
-        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
+        <button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product.name}', ${product.price})">Add to Basket</button>
     </div>
 	
 	
