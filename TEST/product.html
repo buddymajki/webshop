@@ -243,7 +243,7 @@
 
 
     <div class="w3-container product-container w3-card w3-round-large w3-padding">
-        <h2 class="w3-center" id="product-title"></h2>
+        <h2 class="w3-center" id="product-name"></h2>
         <h4 class="w3-center" id="product-brand"></h4>
         
         <div class="w3-content w3-display-container" style="max-width:600px">
@@ -254,7 +254,8 @@
         <p><strong>Description:</strong></p>
         <p id="product-description"></p>
         
-        <button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product.name}', ${product.price})">Add to Basket</button>
+        <button class="w3-button w3-light-blue w3-margin" onclick="addToBasket('${product-name}', ${product-price})">Add to Basket</button>
+		<button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
     </div>
 	
 	
