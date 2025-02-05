@@ -23,7 +23,7 @@
       "name": "Fastbag (solo)",
       "brand": "FLYwithMIKI",
       "price": 105,
-      "image": "https://shop.flywithmiki.com/img/bag.webp",
+      "image": "https://shop.flywithmiki.com/img/fastbag/1.webp",
       "link": "solobag.html",
 	  "hover": "The perfect solution if you do not want to waste too much time with packing before and after flying."
     },
@@ -31,7 +31,7 @@
       "name": "Concertina bag (280cm)",
       "brand": "YowFly",
       "price": 60,
-      "image": "https://shop.flywithmiki.com/img/conc.webp",
+      "image": "https://shop.flywithmiki.com/img/concertina/1.webp",
       "link": "conc.html",
 	  "hover": "Store your glider in the best way to keep it in shape for several years."
     },
@@ -39,7 +39,7 @@
       "name": "SHV number digits",
       "brand": "HA",
       "price": 1.5,
-      "image": "https://shop.flywithmiki.com/img/uts/0.png",
+      "image": "https://shop.flywithmiki.com/img/shvnummer/1.jpg",
       "link": "shvnummer.html",
 	  "hover": "Put your SHV number on your glider to fulfill your legal duties."
     }
@@ -49,7 +49,7 @@
       "name": "Ultrabip",
       "brand": "Stodeus",
       "price": 305,
-      "image": "https://shop.flywithmiki.com/img/ultrabip.webp",
+      "image": "https://shop.flywithmiki.com/img/stodeus/ultra/1.webp",
       "link": "bipbip.html",
 	  "hover": "The best immediate vario with built-in GPS, Bluetooth, and other features for every hike and fly and XC pilots."
     },
@@ -57,7 +57,7 @@
       "name": "Bipbip",
       "brand": "Stodeus",
       "price": 125,
-      "image": "https://shop.flywithmiki.com/img/bipbip.webp",
+      "image": "https://shop.flywithmiki.com/img/stodeus/bipbip/1.webp",
       "link": "bipbip.html",
 	  "hover": "Solar powered variometer for pilots who likes light weight, and simplicity."
     },
