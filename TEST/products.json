@@ -1,13 +1,13 @@
 {
   "books": [
-	{
-	   "name": "The Beginners Guide",
-	   "brand": "B. Wentzel & E. Ewing",
-	   "price": 42,
-	   "image": "https://shop.flywithmiki.com/img/begguide/",
-	   "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.",
-	   "description": "<h2>The Perfect Start to Paragliding</h2><p>This book covers <strong>everything</strong> a beginner pilot needs to know, including:</p><ul><li>Flight techniques</li><li>Weather patterns</li><li>Safety procedures</li></ul><p><strong>Authors:</strong> B. Wentzel & E. Ewing</p>"
-	},
+{
+  "name": "The Beginners Guide",
+  "brand": "B. Wentzel & E. Ewing",
+  "price": 42,
+  "image": "https://shop.flywithmiki.com/img/begguide/",
+  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.",
+  "description": "<p><strong>Description:</strong></p> <p>Paragliding: The Beginner’s Guide is the one book you need to help you learn to paraglide. It contains everything you need to know to take you from your first flight to becoming a qualified pilot and beyond.</p> <p>Clear writing, photos and illustrations make the concepts easy to grasp. From how turbulence can form behind hills and terrain, to how you can use thermals to climb up thousands of feet in the sky.</p> <p>The book follows the broad teaching curricula of the BHPA (UK), USHPA (USA) and other national paragliding organisations, making it suitable for pilots worldwide.</p> <p><em>'Inclusive, informative and visually interesting, this is a must-have reference book for all budding pilots around the world.'</em> – Jocky Sanderson</p> <h3>Chapter Highlights:</h3> <ul> <li><strong>Understanding the air:</strong> Learn how the air moves and how it affects paragliding.</li> <li><strong>All the gear you need:</strong> Get insights into different paragliders, harnesses, and essential equipment.</li> <li><strong>Getting started:</strong> Learn about training courses, launching, turning, and landing safely.</li> <li><strong>Learning about the weather:</strong> A comprehensive meteorology primer for paragliders.</li> <li><strong>Becoming a qualified pilot:</strong> Master advanced techniques and safety maneuvers.</li> <li><strong>Going places:</strong> Understand air law, airspace, and navigation tools.</li> <li><strong>Getting your licence:</strong> Follow internationally recognized training principles.</li> <li><strong>The story of paragliding:</strong> Discover how the sport evolved from its origins to today’s adventures.</li> </ul>"
+},
     {
       "name": "Understanding the Sky",
       "brand": "Dennis Pagen",
