@@ -210,6 +210,17 @@ html {scroll-behavior: smooth;}
         }
 
 //PRODUCT PAGE-hez VÉGE
+<style>
+    /* Ensure the slideshow images have the same height */
+    #image-slideshow img {
+        width: 100%;       /* Ensures the images fit within the container */
+        height: 300px;     /* Fixed height */
+        object-fit: cover; /* Maintains aspect ratio while cropping */
+        display: block;    /* Prevents inline gaps */
+        margin: auto;
+    }
+
+</style>
 
 
             #checkout-form { display: none; }
@@ -268,12 +279,12 @@ html {scroll-behavior: smooth;}
         <h4 class="w3-center" id="product-brand"></h4>
         
     <!-- Image Slideshow -->
-    <div class="w3-content w3-display-container" style="max-width:600px; width: auto; height: 300px; object-fit: contain">
-        <div id="image-slideshow" ></div>
+	<div class="w3-content w3-display-container" style="max-width:600px; width: auto;">
+		<div id="image-slideshow"></div>
 
-        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
+		<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
 
     <!-- Thumbnails -->
     <div id="thumbnail-container" class="thumbnail-container"></div>
