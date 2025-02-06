@@ -12,7 +12,7 @@ if (productId) {
             if (product) {
                 document.getElementById("product-title").textContent = product.name;
                 document.getElementById("product-brand").textContent = product.brand || "";
-                document.getElementById("product-description").textContent = product.description;
+                document.getElementById("product-description").innerHTML = product.description;
                 document.getElementById("product-price").textContent = product.price;
 
                 // Load all available images dynamically

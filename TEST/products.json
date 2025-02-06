@@ -6,7 +6,22 @@
       "price": 42,
       "image": "https://shop.flywithmiki.com/img/begguide/",
 	  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.",
-	  "description": "BLABLABLABLABLABLABLABLA"
+	  "description": "<h2>Advanced Paragliding Wing</h2>
+        <p>This paraglider is designed for experienced pilots who demand high performance and safety.</p>
+        <h3>Features:</h3>
+        <ul>
+          <li>Lightweight and durable</li>
+          <li>Excellent glide ratio</li>
+          <li>Certified EN-B</li>
+        </ul>
+        <h3>Technical Specifications</h3>
+        <table class='w3-table w3-bordered'>
+          <tr><th>Size</th><th>Weight Range</th><th>Aspect Ratio</th></tr>
+          <tr><td>S</td><td>65-85 kg</td><td>5.7</td></tr>
+          <tr><td>M</td><td>80-100 kg</td><td>5.8</td></tr>
+          <tr><td>L</td><td>95-115 kg</td><td>5.9</td></tr>
+        </table>
+        <p><strong>Includes:</strong> Glider, risers, carrying bag, and user manual.</p>"
     },
     {
       "name": "Understanding the Sky",
