@@ -306,12 +306,11 @@
 
 
 
-    <div id="product-description"></div>
+     <div id="product-description"></div>
 
-
-        <p><strong>Price:</strong> <span id="product-price"></span> CHF</p>
+     <p><strong>Price:</strong> <span id="product-price"></span> CHF</p>
         
-        <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
+     <button class="w3-button w3-light-blue w3-round w3-margin" onclick="addToBasket()">Add to Basket</button>
     </div>
 	
 <!-- Link JavaScript file -->
@@ -519,6 +518,31 @@ function submitOrder(event) {
 </script>
 <!-- BASKETSCRIPT -->
 
+
+<!--SHV nummer calculator------------------->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('numberForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var inputNumber = document.getElementById('numberInput').value;
+        var summary = summarizeNumber(inputNumber);
+        document.getElementById('result').innerHTML = "The number of digits you have to purchase: <b>" + summary + "</b> pcs.";
+    });
+
+    function summarizeNumber(number) {
+        var lookupTable = {
+            '0': 6, '1': 2, '2': 5, '3': 5, '4': 4,
+            '5': 5, '6': 6, '7': 3, '8': 7, '9': 6
+        };
+        var sum = 0;
+        for (var i = 0; i < number.length; i++) {
+            var digit = number.charAt(i);
+            sum += lookupTable[digit] || 0;
+        }
+        return sum;
+    }
+});
+</script>
 
 
 <!-- Product szín választó -->
