@@ -4,8 +4,7 @@
       "name": "The Beginners Guide",
       "brand": "B. Wentzel & E. Ewing",
       "price": 42,
-      "image": "https://shop.flywithmiki.com/img/begguide/1.jpg",
-      "link": "begguide.html",
+      "image": "https://shop.flywithmiki.com/img/begguide/",
 	  "hover": "This book is an essential guide for beginner paragliders, covering techniques, safety, and weather analysis.",
 	  "description": "BLABLABLABLABLABLABLABLA"
     },
@@ -13,8 +12,7 @@
       "name": "Understanding the Sky",
       "brand": "Dennis Pagen",
       "price": 45,
-      "image": "https://shop.flywithmiki.com/img/uts/0.png",
-      "link": "uts.html",
+      "image": "https://shop.flywithmiki.com/img/uts/",
 	  "hover": "Meteorology is the cornerstone of our sport. To become a safe pilot, we should understand what is going on. This book covers it"	
     }
   ],
@@ -23,24 +21,21 @@
       "name": "Fastbag (solo)",
       "brand": "FLYwithMIKI",
       "price": 105,
-      "image": "https://shop.flywithmiki.com/img/fastbag/1.webp",
-      "link": "solobag.html",
+      "image": "https://shop.flywithmiki.com/img/fastbag/",
 	  "hover": "The perfect solution if you do not want to waste too much time with packing before and after flying."
     },
 	{
       "name": "Concertina bag (280cm)",
       "brand": "YowFly",
       "price": 60,
-      "image": "https://shop.flywithmiki.com/img/concertina/1.webp",
-      "link": "conc.html",
+      "image": "https://shop.flywithmiki.com/img/concertina/",
 	  "hover": "Store your glider in the best way to keep it in shape for several years."
     },
     {
       "name": "SHV number digits",
       "brand": "HA",
       "price": 1.5,
-      "image": "https://shop.flywithmiki.com/img/shvnummer/1.jpg",
-      "link": "shvnummer.html",
+      "image": "https://shop.flywithmiki.com/img/shvnummer/",
 	  "hover": "Put your SHV number on your glider to fulfill your legal duties."
     }
   ],
@@ -49,24 +44,21 @@
       "name": "Ultrabip",
       "brand": "Stodeus",
       "price": 305,
-      "image": "https://shop.flywithmiki.com/img/stodeus/ultra/1.webp",
-      "link": "bipbip.html",
+      "image": "https://shop.flywithmiki.com/img/stodeus/ultra/",
 	  "hover": "The best immediate vario with built-in GPS, Bluetooth, and other features for every hike and fly and XC pilots."
     },
     {
       "name": "Bipbip",
       "brand": "Stodeus",
       "price": 125,
-      "image": "https://shop.flywithmiki.com/img/stodeus/bipbip/1.webp",
-      "link": "bipbip.html",
+      "image": "https://shop.flywithmiki.com/img/stodeus/bipbip/",
 	  "hover": "Solar powered variometer for pilots who likes light weight, and simplicity."
     },
     {
       "name": "PMR Radio",
       "brand": "Basisrausch (Wintec)",
       "price": 229,
-      "image": "https://shop.flywithmiki.com/img/wintec.webp",
-      "link": "wintec.html",
+      "image": "https://shop.flywithmiki.com/img/wintec/",
 	  "hover": "Robust PMR radio! The must to have equipment if you want to talk with your instructors or friends during flying."
     }
   ]
