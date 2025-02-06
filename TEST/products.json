@@ -44,14 +44,14 @@
       "name": "Ultrabip",
       "brand": "Stodeus",
       "price": 305,
-      "image": "https://shop.flywithmiki.com/img/stodeus/ultra/",
+      "image": "https://shop.flywithmiki.com/img/ultra/",
 	  "hover": "The best immediate vario with built-in GPS, Bluetooth, and other features for every hike and fly and XC pilots."
     },
     {
       "name": "Bipbip",
       "brand": "Stodeus",
       "price": 125,
-      "image": "https://shop.flywithmiki.com/img/stodeus/bipbip/",
+      "image": "https://shop.flywithmiki.com/img/bipbip/",
 	  "hover": "Solar powered variometer for pilots who likes light weight, and simplicity."
     },
     {
