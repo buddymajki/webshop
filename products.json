@@ -28,11 +28,35 @@
     },
 	{
       "name": "Concertina bag (280cm)",
-      "brand": "YowFly",
+      "brand": "FLYwithMIKI",
       "price": 60,
       "image": "https://shop.flywithmiki.com/img/concertina/",
 	  "hover": "Store your glider in the best way to keep it in shape for several years.",
 	  "description": "<p><strong>Description:</strong></p><p>Paragliding Concertina Packing Bags lets you pack your wing quickly, maintaining it in perfect condition ready for your next flight. It is necessary to keep the glider in good condition to improve its operational life.</p><p>Folding your wing using the concertina method maintains optimum performance and inflation characteristics by maintaining the shape of the leading edge and by minimizing panel stretching and fabric abrasion.</p><p>High quality materials are used throughout, chosen for their durability and light weight.A flap system with buckles along 2/3rds of the length holds the wing in place neatly and integrated straps secure the folded bag. </p>"
+    },
+	{
+      "name": "Pilot Helmet",
+      "brand": "Sup'Air",
+      "price": 133,
+      "image": "https://shop.flywithmiki.com/img/helm/",
+	  "hover": "Comfortable helmet in fancy colors, designed for Paragliding",
+	  "description":"<p><strong>Description:</strong></p><p>The Helmet PILOT is developed by SUPAIR for the flight in paraglider. It is modern, comfortable and very light. <br><br> At <strong>380g it is probably the lightest Helmet on the market today</strong>. The comfort is obtained both by the lightness of the Helmet and the foams positioned on the headband and on the bottom. <br><br>With its excellent field of vision, the PILOT is a Helmet that knows how to be forgotten! <br>The knob is very efficient and allows the head size to be adjusted to the pilot's head size. Thanks to its one-piece construction with a thumbwheel from Adjustment, its one size fits all, covering a height range of 54 to 59 cm! Ventilation is provided by an internal air circuit with an external air intake. The chinstrap is closed by an automatic, precisely adjustable loops . Opening is intuitive and easy with gloves on.<br><br>The earpieces are removable and the internal comfort foam is easy to clean.<br><br>The helmets of flight PILOT meet the requirements of the <strong>European standard EN966 : 2012 + A1 : 2012</strong> and comply with the <strong>EU regulation 2016/425 on personal protective equipment cat 2.</strong></p>"
+    },
+	{
+      "name": "Gloves (Softshell)",
+      "brand": "Sup'Air",
+      "price": 96.5,
+      "image": "https://shop.flywithmiki.com/img/gloves/",
+	  "hover": "Perfect gloves for groundhandling and for flying from spring until autumn. During winter we recommend to use this glove and a mittens",
+	  "description":"<p><strong>Description:</strong></p><p>Softshell gloves for freeride flight , flexible and precise (detangling, lines and brake holding), warm and windproof (for off-season flight ).<br><br>Keep your hands warm with Supair softshell gloves thanks to their fleece lining and windproof membrane. The snug-fitting cut right down to the fingertips provides the precision needed for untangling lines and gripping controls.</p> <p><strong>Sizes:</strong> S(8), M(9), L(10), XL(11)</p><p><strong>Weight:</strong> 90g"
+    },
+	{
+      "name": "Mittens (Winter gloves)",
+      "brand": "FLYwithMIKI",
+      "price": 69,
+      "image": "https://shop.flywithmiki.com/img/mittens/",
+	  "hover": "Flying during winter or high above snowy peaks are amazing, but could be cold for our fingers. With these Mittens, we could enjoy the flights even in cold temperatures.",
+	  "description":"<p><strong>Description:</strong></p><p>This brake mittens, suitable for most pilots wanting warms hands on long, cold cross-country flights.This is an improved version, adding 2 metal rings for better support. The cuffs are shrunk for better warmth.The mittens easily attach to your brakes via an opening at the top that closes with a zip.<br><br>With the zip open the mittens can be worn as sleeves on your arms during launch. Once in the air slide the mittens up over your brake handles, do the zip up, and clip the karabiner to the brake line. Then just put your hands inside and appreciate the toasty warmth. <br><br>These mittens are roomy enough to allow you to hold the brakes in your usual style, and will accommodate a paramotor throttle. Supplied as a pair.</p> <p><strong>Features:</strong> 60G fill down gives excellent warmth<br> Windproof outers<br>Breathable linings</p><p><strong>Weight:</strong> 160g"
     },
     {
       "name": "SHV number digits",
