@@ -59,7 +59,7 @@
 
 
 <!-- MENU----------------------------->
-<div id="menu-container"></div>
+<div id="menu-container" style="  position: sticky;  top: 0;  min-height: 42px;  z-index: 1000;"></div>
 
 <script>
   // Load menu.html into the div with the ID 'menu-container'
@@ -350,6 +350,28 @@ function addToBasketWithColor(productName, price, colorGroupName) {
 </script>
 <!-- Product szín választó -->
 
+
+<!-- DROPDOWN kiolvassa a kategóriákat a products.json-ból -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("products.json")
+                .then(response => response.json())
+                .then(data => {
+                    const categoryContainer = document.getElementById("categoryList");
+                    categoryContainer.innerHTML = ""; // Clear previous content
+
+                    Object.keys(data).forEach(category => {
+                        const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+                        const categoryElement = document.createElement("a");
+                        categoryElement.textContent = formattedCategory;
+                        categoryElement.href = `./#${category.toLowerCase()}`; // Link to category section
+                        categoryContainer.appendChild(categoryElement);
+                    });
+                })
+                .catch(error => console.error("Error loading products:", error));
+        });
+    </script>
+<!-- DROPDOWN kiolvassa a kategóriákat a products.json-ból -->
 
 
 

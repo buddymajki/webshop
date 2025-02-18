@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             const container = document.getElementById("products-container");
 
+            // Check for a hash in the URL and scroll to that section after the page is loaded
+            const targetCategory = window.location.hash ? window.location.hash.substring(1) : null;
+
             for (const category in data) {
                 const section = document.createElement("div");
                 section.className = "w3-container w3-margin-top";
+                section.id = category;  // Set the section ID to the category name
                 section.innerHTML = `<h3>${category.charAt(0).toUpperCase() + category.slice(1)}</h3>`;
 
                 const row = document.createElement("div");
@@ -42,6 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 section.appendChild(row);
                 container.appendChild(section);
+
+                // Check if the current category matches the target category from the URL hash
+                if (targetCategory && category === targetCategory) {
+                    // Scroll to the section with an offset
+                    section.scrollIntoView({ behavior: 'smooth' });
+
+
+                }
             }
         })
         .catch(error => console.error("Error loading products:", error));

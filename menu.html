@@ -1,4 +1,18 @@
 <!-- menu.html -->
+<style>
+  .topnav {
+    background-color: #c0dbeb;
+    position: sticky;
+    top: 0;
+    min-height: 42px;
+    z-index: 1000;
+  }
+
+  .topnav.responsive {
+    position: sticky;
+  }
+</style>
+
 <div class="topnav" id="myTopnav">
   <a href="./">Home</a>
 
@@ -6,11 +20,7 @@
     <button class="dropbtn">Products
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
-      <a href="#books">Books</a>
-      <a href="#accessories">Accessories</a>
-      <a href="#instruments">Instruments</a>
-      <a href="#gliders">Gliders & Harnesses</a>
+    <div class="dropdown-content" id="categoryList">
     </div>
   </div>
 
